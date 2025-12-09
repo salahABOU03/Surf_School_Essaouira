@@ -1,0 +1,4 @@
+- [ ] Update script.js to add 'touchstart' event listener for better mobile support
+- [ ] Update style.css: temporarily increase media query max-width to 1000px, add padding and cursor to hamburger, remove margin-left and add margin-bottom to nav-links li
+- [ ] Test the changes by launching the browser and verifying hamburger menu appears on click
+- [ ] If successful, revert media query max-width back to 768px

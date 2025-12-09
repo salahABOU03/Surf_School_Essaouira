@@ -97,6 +97,7 @@ img {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 10px;
 }
 
 .hamburger span {
@@ -366,6 +367,11 @@ img {
         flex-direction: column;
         padding: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
     .nav-links.active {
