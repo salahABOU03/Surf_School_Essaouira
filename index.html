@@ -3,81 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surf School Essaouira - Beginner Surf Lessons in Morocco</title>
-    <meta name="description" content="Join our surf school in Essaouira, Morocco for beginner-friendly surf lessons. Professional instruction, equipment included, perfect for tourists.">
-    <meta name="keywords" content="surf school Essaouira, surf lessons Morocco, beginner surf lessons, surfing Morocco">
+    <title>Essaouira Watersports School - Surf, Windsurf, Kitesurf, Wingfoil Lessons</title>
+    <meta name="description" content="Professional watersports school in Essaouira, Morocco. Learn surf, windsurf, kitesurf, and wingfoil with certified instructors. Beginner-friendly courses and equipment rentals.">
+    <meta name="keywords" content="surf school Essaouira, kitesurf Essaouira, windsurf Essaouira, wingfoil Essaouira, watersports Morocco">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav id="navbar">
+    <!-- HEADER / NAVBAR -->
+    <header id="header">
         <div class="container">
-            <h1 class="logo">Essaouira Surf School</h1>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#lessons">Lessons</a></li>
-                <li><a href="#prices">Prices</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="logo">
+                <h1>Essaouira Watersports School</h1>
             </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#rentals">Rentals</a></li>
+                    <li><a href="#prices">Prices</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+        <div class="drawer-content">
+            <button class="close-drawer" id="close-drawer">&times;</button>
+            <ul>
+                <li><a href="#hero" class="drawer-link">Home</a></li>
+                <li><a href="#about" class="drawer-link">About</a></li>
+                <li><a href="#courses" class="drawer-link">Courses</a></li>
+                <li><a href="#rentals" class="drawer-link">Rentals</a></li>
+                <li><a href="#prices" class="drawer-link">Prices</a></li>
+                <li><a href="#gallery" class="drawer-link">Gallery</a></li>
+                <li><a href="#contact" class="drawer-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- HERO SECTION -->
     <section id="hero">
-        <img src="DSC_0570.jpg" alt="Surf School Background" class="hero-background">
         <div class="hero-content">
-            <h1>Surf School in Essaouira (test)</h1>
-            <p>Beginner-Friendly Surf Lessons for Tourists</p>
-            <a href="https://wa.me/1234567890?text=Hello%2C%20I%20want%20to%20book%20a%20surf%20lesson!" class="cta-button">Book on WhatsApp</a>
+            <h1>Watersports School in Essaouira</h1>
+            <p class="subtitle">Surf • Windsurf • Kitesurf • Wingfoil</p>
+            <a href="#" class="cta-btn">Book on WhatsApp</a>
+        </div>
+        <!-- ADD HERO IMAGE OR VIDEO HERE -->
+        <div class="hero-media">
+            <!-- <img src="hero-image.jpg" alt="Essaouira Watersports Hero"> -->
+            <!-- <video autoplay muted loop>
+                <source src="hero-video.mp4" type="video/mp4">
+            </video> -->
         </div>
     </section>
 
-    <!-- ABOUT ME SECTION -->
+    <!-- ABOUT SECTION -->
     <section id="about">
         <div class="container">
-            <h2>About Your Surf Instructor</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p><!-- ADD YOUR EXPERIENCE TEXT HERE -->With over 10 years of experience surfing the waves of Essaouira, I have dedicated my life to sharing the thrill of surfing with beginners and tourists alike.</p>
-                    <p><!-- ADD YOUR PASSION TEXT HERE -->My passion for surfing started young, and now I love teaching others how to catch their first wave in the beautiful Moroccan coast.</p>
-                    <p><!-- ADD YOUR TEACHING TEXT HERE -->As a patient and experienced instructor, I specialize in making surf lessons fun and accessible for all levels, especially tourists visiting Essaouira.</p>
-                    <!-- OPTIONAL SHORT PERSONAL INTRO VIDEO HERE -->
-                    <!-- <video controls><source src="your-intro-video.mp4" type="video/mp4"></video> -->
+            <h2>About Us</h2>
+            <!-- ADD TEXT HERE -->
+            <p>Our certified instructors have years of experience teaching watersports to tourists and beginners from around the world. We prioritize safety and use only professional-grade equipment.</p>
+            <!-- ADD PROFILE IMAGE OR INTRO VIDEO HERE -->
+            <div class="about-media">
+                <!-- <img src="instructor.jpg" alt="Our Instructors"> -->
+                <!-- <video controls>
+                    <source src="intro-video.mp4" type="video/mp4">
+                </video> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses">
+        <div class="container">
+            <h2>Courses</h2>
+            <div class="cards-grid">
+                <!-- Surf Lessons -->
+                <div class="card">
+                    <h3>Surf Lessons</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Learn to ride the waves in the beautiful waters of Essaouira. Perfect for beginners and intermediate surfers.</p>
+                    <p>Beginner level: Yes</p>
+                    <p>Duration: 2 hours <!-- CHANGE DURATION HERE --></p>
+                    <p>Equipment included: Board, leash, wetsuit</p>
+                    <p class="price">From 25 € / session <!-- CHANGE PRICE HERE --></p>
+                    <a href="#" class="cta-btn">Book on WhatsApp</a>
                 </div>
-                <div class="about-image">
-                    <img src="DSC_0570.jpg" alt="Surf Instructor">
+                <!-- Windsurf Lessons -->
+                <div class="card">
+                    <h3>Windsurf Lessons</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Master the art of windsurfing with our expert guidance. Suitable for all skill levels.</p>
+                    <p>Beginner level: Yes</p>
+                    <p>Duration: 2 hours <!-- CHANGE DURATION HERE --></p>
+                    <p>Equipment included: Board, sail, harness</p>
+                    <p class="price">From 30 € / session <!-- CHANGE PRICE HERE --></p>
+                    <a href="#" class="cta-btn">Book on WhatsApp</a>
+                </div>
+                <!-- Kitesurf Lessons -->
+                <div class="card">
+                    <h3>Kitesurf Lessons</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Experience the thrill of kitesurfing in Essaouira's windy conditions. Beginner-friendly courses available.</p>
+                    <p>Beginner level: Yes</p>
+                    <p>Duration: 3 hours <!-- CHANGE DURATION HERE --></p>
+                    <p>Equipment included: Kite, board, harness, safety gear</p>
+                    <p class="price">From 40 € / session <!-- CHANGE PRICE HERE --></p>
+                    <a href="#" class="cta-btn">Book on WhatsApp</a>
+                </div>
+                <!-- Wingfoil Lessons -->
+                <div class="card">
+                    <h3>Wingfoil Lessons</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Discover wingfoiling, the latest watersport sensation. Our instructors will get you flying in no time.</p>
+                    <p>Beginner level: Yes</p>
+                    <p>Duration: 3 hours <!-- CHANGE DURATION HERE --></p>
+                    <p>Equipment included: Wing, board, foil, harness</p>
+                    <p class="price">From 50 € / session <!-- CHANGE PRICE HERE --></p>
+                    <a href="#" class="cta-btn">Book on WhatsApp</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LESSONS SECTION -->
-    <section id="lessons">
+    <!-- RENTALS SECTION -->
+    <section id="rentals">
         <div class="container">
-            <h2>How Our Lessons Work</h2>
-            <div class="lessons-grid">
-                <div class="lesson-card">
-                    <h3>Warm-Up</h3>
-                    <p>We start with a fun warm-up session on the beach to get you ready for the waves.</p>
+            <h2>Rentals</h2>
+            <div class="cards-grid">
+                <!-- Surf Equipment Rental -->
+                <div class="card">
+                    <h3>Surf Equipment Rental</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>High-quality surfboards, leashes, and wetsuits available for rent.</p>
+                    <p>Time duration: 1-4 hours <!-- CHANGE DURATION HERE --></p>
+                    <p class="price">From 10 € / hour <!-- CHANGE PRICE HERE --></p>
                 </div>
-                <div class="lesson-card">
-                    <h3>Theory</h3>
-                    <p>Learn the basics of surfing, safety rules, and wave reading in a relaxed environment.</p>
+                <!-- Windsurf Equipment Rental -->
+                <div class="card">
+                    <h3>Windsurf Equipment Rental</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Complete windsurfing setups including board, sail, and harness.</p>
+                    <p>Time duration: 1-4 hours <!-- CHANGE DURATION HERE --></p>
+                    <p class="price">From 15 € / hour <!-- CHANGE PRICE HERE --></p>
                 </div>
-                <div class="lesson-card">
-                    <h3>Water Practice</h3>
-                    <p>Get in the water and practice catching waves with personalized guidance.</p>
+                <!-- Kitesurf Equipment Rental -->
+                <div class="card">
+                    <h3>Kitesurf Equipment Rental</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Professional kitesurfing gear: kite, board, harness, and safety equipment.</p>
+                    <p>Time duration: 1-4 hours <!-- CHANGE DURATION HERE --></p>
+                    <p class="price">From 20 € / hour <!-- CHANGE PRICE HERE --></p>
                 </div>
-                <div class="lesson-card">
-                    <h3>Safety First</h3>
-                    <p>All lessons prioritize safety, with proper equipment and constant supervision.</p>
+                <!-- Wingfoil Equipment Rental -->
+                <div class="card">
+                    <h3>Wingfoil Equipment Rental</h3>
+                    <!-- ADD TEXT HERE -->
+                    <p>Latest wingfoil equipment for an unforgettable experience.</p>
+                    <p>Time duration: 1-4 hours <!-- CHANGE DURATION HERE --></p>
+                    <p class="price">From 25 € / hour <!-- CHANGE PRICE HERE --></p>
                 </div>
             </div>
         </div>
@@ -86,29 +180,50 @@
     <!-- PRICES SECTION -->
     <section id="prices">
         <div class="container">
-            <h2>Lesson Packages</h2>
-            <div class="prices-grid">
-                <div class="price-card">
-                    <h3>1 Lesson</h3>
-                    <p class="price"><!-- CHANGE PRICE HERE -->$50</p>
-                    <p>2 hours duration</p>
-                    <p>Equipment included</p>
-                    <a href="https://wa.me/1234567890?text=Hello%2C%20I%20want%20to%20book%201%20lesson!" class="book-button">Book Now</a>
+            <h2>Prices</h2>
+            <div class="prices-container">
+                <div class="price-section">
+                    <h3>Courses Prices</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <h4>Surf Lessons</h4>
+                            <p>From 25 € <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card">
+                            <h4>Windsurf Lessons</h4>
+                            <p>From 30 € <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card">
+                            <h4>Kitesurf Lessons</h4>
+                            <p>From 40 € <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card highlight">
+                            <h4>Wingfoil Lessons</h4>
+                            <p>From 50 € <!-- CHANGE PRICE HERE --></p>
+                            <span>Best Value</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="price-card popular">
-                    <h3>3 Lessons Pack</h3>
-                    <p class="price"><!-- CHANGE PRICE HERE -->$135</p>
-                    <p>6 hours total</p>
-                    <p>Equipment included</p>
-                    <span class="badge">Best Offer</span>
-                    <a href="https://wa.me/1234567890?text=Hello%2C%20I%20want%20to%20book%203%20lessons%20pack!" class="book-button">Book Now</a>
-                </div>
-                <div class="price-card">
-                    <h3>5 Lessons Pack</h3>
-                    <p class="price"><!-- CHANGE PRICE HERE -->$200</p>
-                    <p>10 hours total</p>
-                    <p>Equipment included</p>
-                    <a href="https://wa.me/1234567890?text=Hello%2C%20I%20want%20to%20book%205%20lessons%20pack!" class="book-button">Book Now</a>
+                <div class="price-section">
+                    <h3>Rental Prices</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <h4>Surf Equipment</h4>
+                            <p>From 10 € / hour <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card">
+                            <h4>Windsurf Equipment</h4>
+                            <p>From 15 € / hour <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card">
+                            <h4>Kitesurf Equipment</h4>
+                            <p>From 20 € / hour <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                        <div class="price-card">
+                            <h4>Wingfoil Equipment</h4>
+                            <p>From 25 € / hour <!-- CHANGE PRICE HERE --></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,14 +234,34 @@
         <div class="container">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="IMG_0900.JPG" alt="Surfing in Essaouira"></div>
-                <div class="gallery-item"><img src="IMG_0959.JPG" alt="Student catching a wave"></div>
-                <div class="gallery-item"><img src="IMG_7499.JPG" alt="Beach lesson"></div>
-                <div class="gallery-item"><img src="IMG_7547.JPG" alt="Group surf session"></div>
-                <div class="gallery-item"><img src="IMG_7548.JPG" alt="Happy student"></div>
-                <!-- ADD YOUR SURF ACTION VIDEOS HERE -->
-                <!-- <div class="gallery-item"><video controls><source src="action-video1.mp4" type="video/mp4"></video></div> -->
-                <!-- <div class="gallery-item"><video controls><source src="action-video2.mp4" type="video/mp4"></video></div> -->
+                <!-- ADD IMAGE HERE -->
+                <div class="gallery-item">
+                    <!-- <img src="surf1.jpg" alt="Surfing in Essaouira"> -->
+                </div>
+                <!-- ADD VIDEO HERE -->
+                <div class="gallery-item">
+                    <!-- <video controls>
+                        <source src="windsurf-video.mp4" type="video/mp4">
+                    </video> -->
+                </div>
+                <!-- ADD IMAGE HERE -->
+                <div class="gallery-item">
+                    <!-- <img src="kitesurf2.jpg" alt="Kitesurfing action"> -->
+                </div>
+                <!-- ADD IMAGE HERE -->
+                <div class="gallery-item">
+                    <!-- <img src="wingfoil3.jpg" alt="Wingfoiling fun"> -->
+                </div>
+                <!-- ADD VIDEO HERE -->
+                <div class="gallery-item">
+                    <!-- <video controls>
+                        <source src="group-lesson.mp4" type="video/mp4">
+                    </video> -->
+                </div>
+                <!-- ADD IMAGE HERE -->
+                <div class="gallery-item">
+                    <!-- <img src="sunset-surf.jpg" alt="Sunset surfing"> -->
+                </div>
             </div>
         </div>
     </section>
@@ -134,16 +269,15 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-content">
-                <a href="https://wa.me/1234567890?text=Hello%2C%20I%20have%20a%20question%20about%20surf%20lessons!" class="whatsapp-button">Contact on WhatsApp</a>
-                <p><!-- ADD YOUR INSTAGRAM LINK HERE --><a href="https://instagram.com/yourhandle">@yourhandle</a></p>
-                <p><!-- ADD YOUR EMAIL HERE -->Email: info@essaouirasurfschool.com</p>
-                <!-- GOOGLE MAPS EMBED PLACEHOLDER -->
-                <div class="map-placeholder">
-                    <!-- ADD YOUR GOOGLE MAPS EMBED HERE -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733248149!2d-9.774!3d31.508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafef5b5b5b5b5b%3A0x1234567890abcdef!2sEssaouira%2C%20Morocco!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+            <h2>Contact</h2>
+            <a href="#" class="cta-btn large">Book on WhatsApp</a>
+            <div class="contact-info">
+                <p>Instagram: <!-- ADD INSTAGRAM LINK HERE --> <a href="#">@essaouira_watersports</a></p>
+                <p>Email: <!-- ADD EMAIL HERE --> info@essaouirawatersports.com</p>
+            </div>
+            <!-- ADD GOOGLE MAPS EMBED HERE -->
+            <div class="map-placeholder">
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.123!2d-9.774!3d31.508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafef1234567890%3A0x123456789abcdef!2sEssaouira%2C%20Morocco!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
             </div>
         </div>
     </section>
@@ -151,11 +285,11 @@
     <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
-            <p>&copy; 2023 Essaouira Surf School. All rights reserved.</p>
+            <p>&copy; 2023 Essaouira Watersports School. All rights reserved.</p>
             <div class="social-links">
-                <!-- ADD YOUR SOCIAL MEDIA LINKS HERE -->
-                <a href="https://wa.me/1234567890">WhatsApp</a>
-                <a href="https://instagram.com/yourhandle">Instagram</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">WhatsApp</a>
             </div>
         </div>
     </footer>
