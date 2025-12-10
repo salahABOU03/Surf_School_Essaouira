@@ -60,9 +60,16 @@ a {
     padding: 15px 20px;
 }
 
+.logo img {
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-left: -10px;
+}
+
 .logo h1 {
     font-size: 1.5rem;
-    color: #007bff;
+    color: #ff6b35;
 }
 
 .desktop-nav {
@@ -181,7 +188,7 @@ a {
 }
 
 .drawer-link:hover {
-    color: #007bff;
+    color: #ff6b35;
 }
 
 /* HERO SECTION */
@@ -194,7 +201,7 @@ a {
     align-items: center;
     text-align: center;
     color: #fff;
-    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background: linear-gradient(135deg, #ff6b35, #ff8e53, #ffb74d, #ba68c8);
 }
 
 .hero-content {
@@ -251,7 +258,23 @@ a {
 /* ABOUT SECTION */
 #about {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('IMG_0900.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    color: #fff;
+}
+
+#about h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#about p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .about-media {
@@ -266,9 +289,19 @@ a {
 }
 
 /* COURSES AND RENTALS SECTIONS */
-#courses, #rentals {
+#courses {
     padding: 60px 0;
     background-color: #f8f9fa;
+}
+
+#rentals {
+    padding: 60px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('IMG_7499.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
 }
 
 .cards-grid {
@@ -279,27 +312,57 @@ a {
 }
 
 .card {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
+/* Specific background images for course cards */
+.card:nth-child(1) { /* Surf Lessons */
+    background-image: url('image.png');
+}
+
+.card:nth-child(2) { /* Windsurf Lessons */
+    background-image: url('image copy 2.png');
+}
+
+.card:nth-child(3) { /* Kitesurf Lessons */
+    background-image: url('image copy.png');
+}
+
+.card:nth-child(4) { /* Wingfoil Lessons */
+    background-image: url('image copy 3.png');
+}
+
 .card h3 {
-    color: #007bff;
+    color: #fff;
+    font-weight: bold;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card p {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .price {
     font-weight: bold;
-    color: #28a745;
+    color: #fff;
     font-size: 1.1rem;
     margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* PRICES SECTION */
@@ -367,6 +430,10 @@ a {
 #gallery {
     padding: 60px 0;
     background-color: #f8f9fa;
+    background-image: url('IMG_0959.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .gallery-grid {
@@ -436,7 +503,7 @@ a {
 
 .social-links a {
     margin: 0 10px;
-    color: #007bff;
+    color: #ff6b35;
 }
 
 /* RESPONSIVE DESIGN */
