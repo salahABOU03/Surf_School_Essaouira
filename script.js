@@ -1,65 +1,99 @@
-// DOM Elements
+// MOBILE MENU LOGIC
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileDrawer = document.getElementById('mobile-drawer');
-const drawerOverlay = document.getElementById('drawer-overlay');
-const closeDrawerBtn = document.getElementById('close-drawer');
-const drawerLinks = document.querySelectorAll('.drawer-link');
+const desktopNav = document.querySelector('.desktop-nav');
 const body = document.body;
 
-// Toggle mobile drawer
-function toggleDrawer() {
-    mobileDrawer.classList.toggle('open');
-    body.classList.toggle('drawer-open');
-}
-
-// Close mobile drawer
-function closeDrawer() {
-    mobileDrawer.classList.remove('open');
-    body.classList.remove('drawer-open');
-}
-
-// Event listeners
-mobileMenuBtn.addEventListener('click', toggleDrawer);
-closeDrawerBtn.addEventListener('click', closeDrawer);
-drawerOverlay.addEventListener('click', closeDrawer);
-
-// Close drawer when clicking a link
-drawerLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        closeDrawer();
-
-        // Smooth scroll to section
-        setTimeout(() => {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }, 300); // Wait for drawer close animation
-    });
-});
-
-// Smooth scroll for desktop nav links
-const navLinks = document.querySelectorAll('.desktop-nav a');
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+// Create mobile menu dynamically if it doesn't exist
+function initMobileMenu() {
+    if (window.innerWidth <= 768) {
+        // Simple toggle for the existing desktop nav on mobile
+        mobileMenuBtn.addEventListener('click', () => {
+            desktopNav.style.display = desktopNav.style.display === 'block' ? 'none' : 'block';
+            desktopNav.style.position = 'absolute';
+            desktopNav.style.top = '100%';
+            desktopNav.style.left = '0';
+            desktopNav.style.width = '100%';
+            desktopNav.style.background = 'white';
+            desktopNav.style.padding = '20px';
+            desktopNav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+            
+            const ul = desktopNav.querySelector('ul');
+            ul.style.flexDirection = 'column';
+            ul.style.gap = '15px';
         });
-    });
-});
+    }
+}
 
-// Close drawer on escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
-        closeDrawer();
+// PRICING TAB LOGIC
+function switchTab(type) {
+    const privateTab = document.getElementById('private-pricing');
+    const groupTab = document.getElementById('group-pricing');
+    const btns = document.querySelectorAll('.tab-btn');
+
+    btns.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-tab="${type}"]`).classList.add('active');
+
+    if (type === 'private') {
+        privateTab.style.display = 'block';
+        groupTab.style.display = 'none';
+    } else {
+        privateTab.style.display = 'none';
+        groupTab.style.display = 'block';
+    }
+}
+
+// HEADER SCROLL EFFECT
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
     }
 });
+
+// SMOOTH SCROLL FOR ALL LINKS
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                desktopNav.style.display = 'none';
+            }
+        }
+    });
+});
+
+// REVEAL ON SCROLL
+function reveal() {
+    var reveals = document.querySelectorAll("section");
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+
+// REVIEWS SCROLL
+function scrollReviews(direction) {
+    const carousel = document.getElementById('review-carousel');
+    if (carousel) {
+        const scrollAmount = carousel.offsetWidth / 1.5;
+        carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+}
+
+// Initial call
+initMobileMenu();
+window.addEventListener('resize', initMobileMenu);
+
