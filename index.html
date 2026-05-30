@@ -149,54 +149,7 @@
                 Good to know: All our lesson prices include the full equipment and wetsuits!
             </div>
 
-            <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">Windsurf, Kitesurf & Wingfoil</h3>
-            <div class="pricing-tabs">
-                <button class="tab-btn active" data-tab="private" onclick="switchTab('private')">Private Lessons</button>
-                <button class="tab-btn" data-tab="group" onclick="switchTab('group')">Group Lessons</button>
-            </div>
-
-            <!-- PRIVATE TABLE -->
-            <div id="private-pricing" class="pricing-table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Duration</th>
-                            <th>Package Price</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="duration">1 Hour</td><td class="price-tag">55€</td><td>Private</td></tr>
-                        <tr><td class="duration">2 Hours</td><td class="price-tag">85€</td><td>Private</td></tr>
-                        <tr><td class="duration">6 Hours</td><td class="price-tag">250€</td><td>Private</td></tr>
-                        <tr><td class="duration">8 Hours</td><td class="price-tag">330€</td><td>Private</td></tr>
-                        <tr><td class="duration">10 Hours</td><td class="price-tag">405€</td><td>Private</td></tr>
-                        <tr><td class="duration">12 Hours</td><td class="price-tag">480€</td><td>Private</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- GROUP TABLE -->
-            <div id="group-pricing" class="pricing-table-container" style="display: none;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Duration</th>
-                            <th>Package Price</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="duration">2 Hours</td><td class="price-tag">60€</td><td>Group</td></tr>
-                        <tr><td class="duration">6 Hours</td><td class="price-tag">179€</td><td>Group</td></tr>
-                        <tr><td class="duration">8 Hours</td><td class="price-tag">236€</td><td>Group</td></tr>
-                        <tr><td class="duration">10 Hours</td><td class="price-tag">293€</td><td>Group</td></tr>
-                        <tr><td class="duration">12 Hours</td><td class="price-tag">350€</td><td>Group</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="section-title" style="margin-top: 80px;">
+            <div class="section-title" style="margin-top: 40px;">
                 <h2>Surf Pricing</h2>
                 <p>Catch your first waves with our structured surf packages.</p>
             </div>
@@ -215,6 +168,57 @@
                         <tr><td class="duration">6 Hours</td><td class="price-tag">80€</td><td><a href="https://wa.me/212625044412?text=Hello%2C%20I%20would%20like%20to%20book%20a%206h%20surf%20lesson" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Book Now</a></td></tr>
                         <tr><td class="duration">10 Hours</td><td class="price-tag">125€</td><td><a href="https://wa.me/212625044412?text=Hello%2C%20I%20would%20like%20to%20book%20a%2010h%20surf%20lesson" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Book Now</a></td></tr>
                         <tr><td class="duration">12 Hours</td><td class="price-tag">135€</td><td><a href="https://wa.me/212625044412?text=Hello%2C%20I%20would%20like%20to%20book%20a%2012h%20surf%20lesson" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Book Now</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-title" style="margin-top: 80px; margin-bottom: 30px;">
+                <h2>Windsurf, Kitesurf & Wingfoil</h2>
+                <p>Tailored pricing for individual and group wind sports lessons.</p>
+            </div>
+            <div class="pricing-tabs">
+                <button class="tab-btn" data-tab="private" onclick="switchTab('private')">Private Lessons</button>
+                <button class="tab-btn active" data-tab="group" onclick="switchTab('group')">Group Lessons</button>
+            </div>
+
+            <!-- GROUP TABLE -->
+            <div id="group-pricing" class="pricing-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Package Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="duration">1 Hour</td><td class="price-tag">50€</td><td>Group</td></tr>
+                        <tr><td class="duration">2 Hours</td><td class="price-tag">60€</td><td>Group</td></tr>
+                        <tr><td class="duration">6 Hours</td><td class="price-tag">179€</td><td>Group</td></tr>
+                        <tr><td class="duration">8 Hours</td><td class="price-tag">236€</td><td>Group</td></tr>
+                        <tr><td class="duration">10 Hours</td><td class="price-tag">293€</td><td>Group</td></tr>
+                        <tr><td class="duration">12 Hours</td><td class="price-tag">350€</td><td>Group</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PRIVATE TABLE -->
+            <div id="private-pricing" class="pricing-table-container" style="display: none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Duration</th>
+                            <th>Package Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="duration">1 Hour</td><td class="price-tag">55€</td><td>Private</td></tr>
+                        <tr><td class="duration">2 Hours</td><td class="price-tag">85€</td><td>Private</td></tr>
+                        <tr><td class="duration">6 Hours</td><td class="price-tag">250€</td><td>Private</td></tr>
+                        <tr><td class="duration">8 Hours</td><td class="price-tag">330€</td><td>Private</td></tr>
+                        <tr><td class="duration">10 Hours</td><td class="price-tag">405€</td><td>Private</td></tr>
+                        <tr><td class="duration">12 Hours</td><td class="price-tag">480€</td><td>Private</td></tr>
                     </tbody>
                 </table>
             </div>
