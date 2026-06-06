@@ -33,7 +33,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     line-height: 1.2;
@@ -160,7 +163,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
 }
 
 .hero-media img {
@@ -179,7 +182,7 @@ section {
     font-size: clamp(2.5rem, 8vw, 5rem);
     margin-bottom: 24px;
     line-height: 1.1;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content .subtitle {
@@ -214,7 +217,7 @@ section {
     font-family: 'Outfit', sans-serif;
     letter-spacing: 3px;
     text-transform: uppercase;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 25px rgba(255, 183, 3, 0.3);
 }
 
@@ -225,8 +228,13 @@ section {
 }
 
 @keyframes badgePulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.03); }
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
 }
 
 .cta-group {
@@ -371,7 +379,8 @@ table {
     min-width: 600px;
 }
 
-th, td {
+th,
+td {
     padding: 20px 24px;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;
@@ -456,7 +465,7 @@ tr:hover td {
     color: white;
 }
 
-.price-card.featured h4, 
+.price-card.featured h4,
 .price-card.featured .hours {
     color: rgba(255, 255, 255, 0.9);
 }
@@ -516,7 +525,7 @@ tr:hover td {
 
 /* --- CONTACT --- */
 .contact-container {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
@@ -560,6 +569,7 @@ tr:hover td {
     gap: 24px;
     margin-top: 40px;
 }
+
 .rental-card {
     background: #f8f9fa;
     padding: 30px 20px;
@@ -568,10 +578,12 @@ tr:hover td {
     border: 1px solid #e2e8f0;
     transition: var(--transition);
 }
+
 .rental-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
+
 .rental-card h4 {
     font-size: 1.25rem;
     margin-bottom: 16px;
@@ -591,11 +603,12 @@ tr:hover td {
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: transform 0.3s ease;
     text-decoration: none;
 }
+
 .floating-whatsapp:hover {
     transform: scale(1.1);
     color: white;
@@ -665,7 +678,7 @@ section.active {
     background: white;
     border-radius: 24px;
     padding: 40px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .review-summary {
@@ -682,7 +695,8 @@ section.active {
     flex: 1;
     position: relative;
     overflow: hidden;
-    min-width: 0; /* Important */
+    min-width: 0;
+    /* Important */
     display: flex;
     align-items: center;
 }
@@ -694,8 +708,10 @@ section.active {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 10px;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .review-carousel::-webkit-scrollbar {
@@ -709,7 +725,7 @@ section.active {
     border-radius: 16px;
     padding: 24px;
     scroll-snap-align: start;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .carousel-btn {
@@ -718,7 +734,7 @@ section.active {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -744,18 +760,59 @@ section.active {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
-    .about-grid, .contact-container {
+
+    .about-grid,
+    .contact-container {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
     .desktop-nav {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0 24px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, padding 0.3s ease, max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+    }
+    
+    .desktop-nav.active {
+        opacity: 1;
+        max-height: 400px;
+        padding: 24px;
+        pointer-events: auto;
+    }
+
+    .desktop-nav ul {
+        flex-direction: column;
+        gap: 16px;
     }
     
     .mobile-menu-btn {
         display: flex;
+    }
+
+    /* Hamburger to X animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     section {
@@ -770,7 +827,7 @@ section.active {
         flex-direction: column;
         padding: 24px;
     }
-    
+
     .review-summary {
         border-right: none;
         border-bottom: 1px solid #e2e8f0;
@@ -782,4 +839,3 @@ section.active {
         flex: 0 0 100%;
     }
 }
-

@@ -1,27 +1,23 @@
 // MOBILE MENU LOGIC
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const desktopNav = document.querySelector('.desktop-nav');
-const body = document.body;
 
-// Create mobile menu dynamically if it doesn't exist
 function initMobileMenu() {
-    if (window.innerWidth <= 768) {
-        // Simple toggle for the existing desktop nav on mobile
-        mobileMenuBtn.addEventListener('click', () => {
-            desktopNav.style.display = desktopNav.style.display === 'block' ? 'none' : 'block';
-            desktopNav.style.position = 'absolute';
-            desktopNav.style.top = '100%';
-            desktopNav.style.left = '0';
-            desktopNav.style.width = '100%';
-            desktopNav.style.background = 'white';
-            desktopNav.style.padding = '20px';
-            desktopNav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-            
-            const ul = desktopNav.querySelector('ul');
-            ul.style.flexDirection = 'column';
-            ul.style.gap = '15px';
-        });
-    }
+    if (!mobileMenuBtn || !desktopNav) return;
+
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenuBtn.classList.toggle('active');
+        desktopNav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!desktopNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            desktopNav.classList.remove('active');
+        }
+    });
 }
 
 // PRICING TAB LOGIC
@@ -63,7 +59,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             // Close mobile menu if open
             if (window.innerWidth <= 768) {
-                desktopNav.style.display = 'none';
+                desktopNav.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
             }
         }
     });
@@ -95,5 +92,4 @@ function scrollReviews(direction) {
 
 // Initial call
 initMobileMenu();
-window.addEventListener('resize', initMobileMenu);
 
