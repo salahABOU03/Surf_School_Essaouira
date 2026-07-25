@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essaouira Wind & Weather Forecast — Live Conditions for Watersports | Kawki Kite</title>
+    <meta name="description" content="Live wind and weather forecast for Essaouira, Morocco. Current wind speed, gusts, direction, temperature & 7-day forecast. Check conditions for wingfoil, kitesurf, windsurf & surf.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kitesurfwingessaouira.com/weather.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Essaouira Wind & Weather — Live Forecast | Kawki Kite">
+    <meta property="og:description" content="Real-time wind and weather data for Essaouira. Check today's conditions for wingfoil, kitesurf, windsurf and surf.">
+    <meta property="og:url" content="https://kitesurfwingessaouira.com/weather.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/jpeg" href="kks.jpg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0077b6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.open-meteo.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+        {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kitesurfwingessaouira.com/"},{"@type":"ListItem","position":2,"name":"Weather","item":"https://kitesurfwingessaouira.com/weather.html"}]},
+        {"@type":"WebPage","name":"Essaouira Wind & Weather Forecast","description":"Live wind conditions and 7-day forecast for watersports in Essaouira, Morocco","publisher":{"@type":"SportsActivityLocation","name":"Kawki Kite"}}
+    ]}
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="header" class="scrolled" role="banner">
+        <div class="container">
+            <div class="logo"><a href="index.html" aria-label="Kawki Kite — Accueil"><img src="kks.jpg" alt="Logo Kawki Kite" width="60" height="60"></a></div>
+            <nav class="desktop-nav" role="navigation" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="nav-dropdown"><a href="#">Nos Sports <i class="fas fa-chevron-down" style="font-size:0.6em;margin-left:4px"></i></a><ul class="dropdown-menu" role="menu"><li role="menuitem"><a href="wingfoil.html" translate="no">Wingfoil</a></li><li role="menuitem"><a href="kitesurf.html" translate="no">Kitesurf</a></li><li role="menuitem"><a href="windsurf.html" translate="no">Windsurf</a></li><li role="menuitem"><a href="surf.html" translate="no">Surf</a></li></ul></li>
+                    <li><a href="pricing.html">Tarifs</a></li><li><a href="spots.html">Spots</a></li><li><a href="weather.html" aria-current="page">Météo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="nav-cta"><i class="fab fa-whatsapp"></i> Réserver</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero" style="background:var(--bg-dark);">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <strong>Weather</strong></nav>
+                <h1>Essaouira Wind &amp; Weather Forecast</h1>
+                <p>Live conditions and 7-day forecast for watersports in Essaouira. Powered by Open-Meteo.</p>
+            </div>
+        </section>
+
+        <!-- FULL WEATHER DASHBOARD -->
+        <section id="weather" style="background:var(--bg-dark);padding-top:0;" class="active">
+            <div class="container">
+                <div class="weather-widget" id="weather-widget" style="max-width:100%;">
+                    <!-- Current Conditions -->
+                    <div class="weather-current">
+                        <div class="weather-main">
+                            <div class="weather-temp" id="weather-temp">--°C</div>
+                            <div class="weather-desc" id="weather-desc">Loading weather data...</div>
+                            <div class="weather-time" id="weather-time"></div>
+                        </div>
+                        <div class="weather-wind-display">
+                            <div class="wind-compass" id="wind-compass">
+                                <div class="compass-arrow" id="compass-arrow"></div>
+                                <span class="compass-label">N</span>
+                            </div>
+                            <div class="wind-stats">
+                                <div class="wind-stat"><span class="wind-stat-label">Wind Speed</span><span class="wind-stat-value" id="weather-wind">-- km/h</span></div>
+                                <div class="wind-stat"><span class="wind-stat-label">Gusts</span><span class="wind-stat-value" id="weather-gusts">-- km/h</span></div>
+                                <div class="wind-stat"><span class="wind-stat-label">Direction</span><span class="wind-stat-value" id="weather-direction">--</span></div>
+                                <div class="wind-stat"><span class="wind-stat-label">Cloud Cover</span><span class="wind-stat-value" id="weather-cloud">--%</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level Suitability -->
+                    <h3 style="color:white;font-size:1.1rem;margin:0;">Today's Conditions For:</h3>
+                    <div class="weather-levels" id="weather-levels">
+                        <div class="level-badge level-beginner"><i class="fas fa-child"></i><span>Beginner</span><span class="level-status" id="level-beginner-status">--</span></div>
+                        <div class="level-badge level-intermediate"><i class="fas fa-running"></i><span>Intermediate</span><span class="level-status" id="level-intermediate-status">--</span></div>
+                        <div class="level-badge level-expert"><i class="fas fa-bolt"></i><span>Expert</span><span class="level-status" id="level-expert-status">--</span></div>
+                    </div>
+
+                    <!-- 7-Day Forecast -->
+                    <h3 style="color:white;font-size:1.1rem;margin:0;">7-Day Wind Forecast</h3>
+                    <div class="weather-forecast" id="weather-forecast"></div>
+
+                    <!-- Hourly Forecast -->
+                    <div class="weather-full-grid">
+                        <div class="weather-full-card">
+                            <h3>Next 24 Hours — Hourly Wind (km/h)</h3>
+                            <div class="hourly-grid" id="hourly-forecast"></div>
+                        </div>
+                        <div class="weather-full-card">
+                            <h3>Wind Guide for Watersports</h3>
+                            <div style="font-size:0.95rem;line-height:1.8;">
+                                <p style="color:rgba(255,255,255,0.8);margin-bottom:12px;">Use this guide to choose your sport based on today's wind:</p>
+                                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><span style="background:rgba(34,197,94,0.2);color:#4ade80;padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:700;">0–12 km/h</span> <span style="color:rgba(255,255,255,0.8)">Surf or SUP 🏄</span></div>
+                                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><span style="background:rgba(34,197,94,0.2);color:#4ade80;padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:700;">12–20 km/h</span> <span style="color:rgba(255,255,255,0.8)">Wingfoil (beginner) 🪁</span></div>
+                                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><span style="background:rgba(255,183,3,0.2);color:var(--secondary);padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:700;">18–30 km/h</span> <span style="color:rgba(255,255,255,0.8)">Kitesurf / Windsurf 🪁💨</span></div>
+                                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><span style="background:rgba(255,183,3,0.2);color:var(--secondary);padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:700;">25–40 km/h</span> <span style="color:rgba(255,255,255,0.8)">Advanced wind sports ⚡</span></div>
+                                <div style="display:flex;align-items:center;gap:10px;"><span style="background:rgba(239,68,68,0.2);color:#f87171;padding:4px 12px;border-radius:50px;font-size:0.8rem;font-weight:700;">40+ km/h</span> <span style="color:rgba(255,255,255,0.8)">Experts only! ⚠️</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO CONTENT -->
+        <section class="page-content active" style="background:white;">
+            <div class="container" style="max-width:800px;">
+                <h2>Essaouira Wind Season — When to Visit</h2>
+                <p>Essaouira is blessed with one of the most consistent wind patterns in the world, thanks to the <strong>Alizé trade winds</strong> that blow from the north/northeast along Morocco's Atlantic coast. These thermal winds are created by the temperature difference between the cool Atlantic Ocean and the hot Saharan interior.</p>
+
+                <h3>Best Wind Season: April to September</h3>
+                <p>The prime season for <a href="kitesurf.html">kitesurfing</a>, <a href="wingfoil.html">wingfoil</a>, and <a href="windsurf.html">windsurfing</a> in Essaouira runs from <strong>April through September</strong>. During these months, the Alizé winds blow almost daily at 18–30 knots (33–55 km/h), typically picking up around midday and lasting until sunset.</p>
+                <ul>
+                    <li><strong>June–August:</strong> Strongest and most consistent wind (20–35 knots). Ideal for intermediate and advanced riders.</li>
+                    <li><strong>April–May &amp; September:</strong> Moderate wind (15–25 knots). Perfect for beginners and learning.</li>
+                </ul>
+
+                <h3>Shoulder Season: October to March</h3>
+                <p>While less consistent, Essaouira still gets windy days during winter. The wind is more variable and can blow from different directions. This is actually the <strong>best season for surfing</strong>, as Atlantic swells are bigger without strong thermal wind chopping up the waves.</p>
+
+                <h3>Wind Direction</h3>
+                <p>The predominant wind direction in Essaouira is <strong>north-northeast (NNE)</strong>, which creates side-shore conditions in the main bay. This is ideal for <a href="kitesurf.html">kitesurfing</a> and <a href="windsurf.html">windsurfing</a> as it keeps you parallel to the beach rather than pushing you out to sea.</p>
+
+                <div style="text-align:center;margin-top:40px;">
+                    <p style="font-weight:700;color:var(--primary-dark);font-size:1.1rem;">Ready to ride the wind?</p>
+                    <a href="https://wa.me/212625044412?text=Hello%2C%20I%20would%20like%20to%20book%20a%20lesson%20in%20Essaouira" class="btn btn-whatsapp" style="margin-top:16px;" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Book Your Session</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="kks.jpg" alt="Kawki Kite" width="50" height="50" loading="lazy"><p>Kawki Kite — Premier watersports school in Essaouira.</p></div><div class="footer-links"><h4>Sports</h4><ul><li><a href="wingfoil.html">Wingfoil</a></li><li><a href="kitesurf.html">Kitesurf</a></li><li><a href="windsurf.html">Windsurf</a></li><li><a href="surf.html">Surf</a></li></ul></div><div class="footer-links"><h4>Info</h4><ul><li><a href="pricing.html">Pricing</a></li><li><a href="spots.html">Spots</a></li><li><a href="weather.html">Weather</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div class="footer-contact"><h4>Contact</h4><a href="https://wa.me/212625044412" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> +212 625 044 412</a><a href="mailto:se552733@gmail.com"><i class="far fa-envelope"></i> se552733@gmail.com</a></div></div><div class="footer-bottom"><p>&copy; 2025–2026 Kawki Kite — Essaouira, Morocco.</p></div></div></footer>
+    <a href="https://wa.me/212625044412" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Book on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>

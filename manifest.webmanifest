@@ -1,0 +1,21 @@
+{
+    "name": "Kawki Kite — Watersports Essaouira",
+    "short_name": "Kawki Kite",
+    "description": "The premier watersports school in Essaouira, Morocco. Wingfoil, Kitesurf, Windsurf & Surf lessons, rental and coaching.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0077b6",
+    "orientation": "portrait-primary",
+    "scope": ".",
+    "lang": "en",
+    "categories": ["sports", "travel", "education"],
+    "icons": [
+        {
+            "src": "kks.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}

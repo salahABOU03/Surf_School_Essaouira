@@ -1,0 +1,19 @@
+# Kawki Kite — Watersports School Essaouira
+# https://kitesurfwingessaouira.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://kitesurfwingessaouira.com/sitemap.xml
+
+# Block non-essential files
+Disallow: /browserconfig.xml
+Disallow: /security.txt
+Disallow: /humans.txt
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

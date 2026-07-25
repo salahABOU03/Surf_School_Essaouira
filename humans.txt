@@ -1,0 +1,12 @@
+/* TEAM */
+Name: Kawki Kite
+Location: Essaouira, Morocco
+Contact: +212 625 044 412
+WhatsApp: https://wa.me/212625044412
+
+/* SITE */
+Last update: 2026-07-23
+Language: English, French, Arabic
+Standards: HTML5, CSS3, ES6+
+Components: Open-Meteo API (Weather)
+Software: Vanilla HTML/CSS/JS (No framework)
