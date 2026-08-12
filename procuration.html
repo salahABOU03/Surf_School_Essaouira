@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>وكالة - طلب واستخراج نظير البطاقة الرمادية</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 10mm 12mm 10mm 12mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Amiri', 'Traditional Arabic', 'Segoe UI', Arial, sans-serif;
+            font-size: 14.5pt;
+            line-height: 1.85;
+            color: #111111;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .document-wrapper {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #111111;
+            padding: 28px 32px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 26pt;
+            font-weight: bold;
+            margin: 0;
+            display: inline-block;
+            padding: 6px 50px;
+            border-top: 2px solid #111;
+            border-bottom: 2px solid #111;
+            letter-spacing: 6px;
+        }
+
+        .body-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .p-block {
+            margin-bottom: 16px;
+            text-indent: 10px;
+        }
+
+        .bold-txt {
+            font-weight: bold;
+        }
+
+        .bdi-num {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+
+        .vehicle-card {
+            margin: 20px 0;
+            padding: 14px 22px;
+            background-color: #fafafa;
+            border: 1px solid #cccccc;
+            border-right: 5px solid #111111;
+            border-radius: 4px;
+        }
+
+        .vehicle-card-title {
+            font-weight: bold;
+            font-size: 15.5pt;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .vehicle-grid {
+            display: table;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .vehicle-row {
+            display: table-row;
+        }
+
+        .vehicle-label, .vehicle-val {
+            display: table-cell;
+            padding: 4px 8px;
+            vertical-align: middle;
+        }
+
+        .vehicle-label {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .date-location {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+
+        .signatures-area {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .sig-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sig-col {
+            width: 50%;
+            vertical-align: top;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sig-box-title {
+            font-weight: bold;
+            font-size: 15.5pt;
+            margin-bottom: 55px;
+        }
+
+        .sig-line {
+            border-bottom: 1px dashed #333333;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .legal-stamp-box {
+            border: 1px dashed #888888;
+            padding: 12px;
+            min-height: 95px;
+            border-radius: 4px;
+            background-color: #fdfdfd;
+            font-size: 11pt;
+            color: #555555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .legal-footnote {
+            margin-top: 18px;
+            text-align: center;
+            font-style: italic;
+            font-size: 11.5pt;
+            color: #444444;
+            border-top: 1px dotted #ccc;
+            padding-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="document-wrapper">
+    <div class="main-content">
+        <!-- Title -->
+        <div class="header">
+            <h1>وكـــــالـــــة</h1>
+        </div>
+
+        <!-- Body Paragraphs -->
+        <div class="body-text">
+            <div class="p-block">
+                أنا الموقع أسفله، السيد: <span class="bold-txt">أبو القمح حميد</span>، 
+                الحامل للبطاقة الوطنية للتعريف رقم: <bdi class="bdi-num">N78311</bdi>، 
+                والساكن بـ: <span class="bold-txt">[عنوان الأب]</span>.
+            </div>
+
+            <div class="p-block">
+                أفوض بموجب هذه الوكالة ابني السيد: <span class="bold-txt">أبو القمح صلاح الدين</span>، 
+                الحامل للبطاقة الوطنية للتعريف رقم: <bdi class="bdi-num">N476536</bdi>، 
+                والساكن بـ: <span class="bold-txt">تجزئة الرونق، الصويرة 23</span>.
+            </div>
+
+            <div class="p-block">
+                وذلك لينوب عني ويقوم مقامي في جميع الإجراءات الإدارية اللازمة لدى مصالح 
+                <span class="bold-txt">الوكالة الوطنية للسلامة الطرقية (<bdi class="bdi-num">NARSA</bdi>)</span>، 
+                المتعلقة بطلب واستخراج نظير من البطاقة الرمادية الخاصة بمركبتي، وذلك بسبب ضياعها.
+            </div>
+
+            <!-- Vehicle Summary -->
+            <div class="vehicle-card">
+                <div class="vehicle-card-title">معلومات المركبة:</div>
+                <div class="vehicle-grid">
+                    <div class="vehicle-row">
+                        <div class="vehicle-label">• العلامة التجارية:</div>
+                        <div class="vehicle-val"><span class="bold-txt">NASH</span></div>
+                    </div>
+                    <div class="vehicle-row">
+                        <div class="vehicle-label">• الرقم الترتيبي:</div>
+                        <div class="vehicle-val"><bdi class="bdi-num">32-001346</bdi></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-block">
+                وقد سلمت هذه الوكالة للمعني بالأمر قصد القيام بالإجراءات المذكورة أعلاه، ولتكون له حجة فيما يخص ذلك.
+            </div>
+        </div>
+    </div>
+
+    <!-- Signatures and Legalization -->
+    <div class="footer-area">
+        <div class="date-location">
+            حرر بالصويرة في: <bdi class="bdi-num">09/08/2026</bdi>
+        </div>
+
+        <div class="signatures-area">
+            <table class="sig-table">
+                <tr>
+                    <td class="sig-col">
+                        <div class="legal-stamp-box">
+                            إطار خاص بتصحيح الإمضاء<br>
+                            (Légalisation de Signature)
+                        </div>
+                    </td>
+                    <td class="sig-col">
+                        <div class="sig-box-title">إمضاء الموكل (الأب):</div>
+                        <div class="sig-line"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="legal-footnote">
+            (يتم توقيع الوكالة أمام موظف تصحيح الإمضاء)
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

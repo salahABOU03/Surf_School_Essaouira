@@ -8,7 +8,7 @@
     <!-- Primary SEO -->
     <title>Kawki Kite — N°1 École de Wingfoil, Kitesurf, Windsurf & Surf à Essaouira, Maroc</title>
     <meta name="description" content="Kawki Kite est la première école de sports nautiques à Essaouira, Maroc. Cours particuliers & collectifs de Wingfoil, Kitesurf, Windsurf & Surf. Location de matériel, coaching & camps. Réservez sur WhatsApp !">
-    <meta name="keywords" content="wingfoil essaouira, kitesurf essaouira, windsurf essaouira, surf essaouira, ecole de kite morocco, ecole wingfoil essaouira, cours surf maroc, sports nautiques essaouira">
+    <meta name="keywords" content="wingfoil essaouira, kitesurf essaouira, windsurf essaouira, surf essaouira, ecole de kite morocco, ecole wingfoil essaouira, cours surf maroc, sports nautiques essaouira, kitesurf school essaouira, wingfoil lessons morocco">
     <meta name="google-site-verification" content="googlea3145711ed2a5e45">
     <meta name="author" content="Kawki Kite">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -49,6 +49,59 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
+    <!-- Language Toggle Styles -->
+    <style>
+        /* Language toggle button */
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .lang-toggle:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+        .lang-flag {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+        /* In scrolled header (dark bg) */
+        header.scrolled .lang-toggle {
+            background: rgba(0,119,182,0.15);
+            border-color: rgba(0,119,182,0.3);
+            color: var(--primary, #0077b6);
+        }
+        header.scrolled .lang-toggle:hover {
+            background: rgba(0,119,182,0.25);
+        }
+        /* Mobile */
+        @media (max-width: 768px) {
+            .lang-toggle-desktop { display: none !important; }
+            .lang-toggle-mobile {
+                display: inline-flex !important;
+                margin: 10px auto;
+                background: rgba(0,119,182,0.1);
+                color: var(--primary, #0077b6);
+                border-color: rgba(0,119,182,0.3);
+            }
+        }
+        @media (min-width: 769px) {
+            .lang-toggle-mobile { display: none !important; }
+        }
+    </style>
+
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
     {
@@ -60,7 +113,7 @@
                 "url": "https://kitesurfwingessaouira.com/",
                 "name": "Kawki Kite",
                 "description": "École de Wingfoil, Kitesurf, Windsurf & Surf à Essaouira, Maroc",
-                "inLanguage": "fr-FR"
+                "inLanguage": ["fr-FR", "en"]
             },
             {
                 "@type": "SportsActivityLocation",
@@ -99,7 +152,7 @@
 
 <body>
     <!-- Skip link -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link" data-i18n="nav.skip">Aller au contenu principal</a>
 
     <!-- HEADER / NAVIGATION -->
     <header id="header" role="banner">
@@ -112,9 +165,9 @@
 
             <nav class="desktop-nav" role="navigation" aria-label="Navigation principale">
                 <ul>
-                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a></li>
                     <li class="nav-dropdown">
-                        <a href="#" aria-haspopup="true">Nos Sports <i class="fas fa-chevron-down" style="font-size:0.6em;margin-left:4px"></i></a>
+                        <a href="#" aria-haspopup="true"><span data-i18n="nav.sports">Nos Sports</span> <i class="fas fa-chevron-down" style="font-size:0.6em;margin-left:4px"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="menuitem"><a href="wingfoil-essaouira.html" translate="no">Wingfoil</a></li>
                             <li role="menuitem"><a href="kitesurf-essaouira.html" translate="no">Kitesurf</a></li>
@@ -122,12 +175,17 @@
                             <li role="menuitem"><a href="surf-essaouira.html" translate="no">Surf</a></li>
                         </ul>
                     </li>
-                    <li><a href="pricing-essaouira.html">Tarifs</a></li>
-                    <li><a href="spots-kitesurf-essaouira.html">Spots</a></li>
-                    <li><a href="weather-essaouira.html">Météo</a></li>
-                    <li><a href="faq-kitesurf-essaouira.html">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="nav-cta" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> Réserver</a></li>
+                    <li><a href="pricing-essaouira.html" data-i18n="nav.pricing">Tarifs</a></li>
+                    <li><a href="spots-kitesurf-essaouira.html" data-i18n="nav.spots">Spots</a></li>
+                    <li><a href="weather-essaouira.html" data-i18n="nav.weather">Météo</a></li>
+                    <li><a href="faq-kitesurf-essaouira.html" data-i18n="nav.faq">FAQ</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="nav-cta" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="nav.book">Réserver</span></a></li>
+                    <li>
+                        <button class="lang-toggle lang-toggle-desktop" id="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">
+                            <span class="lang-flag">🇬🇧</span> EN
+                        </button>
+                    </li>
                 </ul>
             </nav>
 
@@ -147,18 +205,22 @@
             </div>
             <div class="hero-content">
                 <div class="hero-badges">
-                    <span class="hero-badge" id="hero-dynamic-badge">MÉTÉO EN DIRECT</span>
-                    <span class="hero-badge">ESSAOUIRA, MAROC</span>
+                    <span class="hero-badge" id="hero-dynamic-badge" data-i18n="hero.badge.weather">MÉTÉO EN DIRECT</span>
+                    <span class="hero-badge" data-i18n="hero.badge.location">ESSAOUIRA, MAROC</span>
+                    <!-- Mobile language toggle inside hero -->
+                    <button class="lang-toggle lang-toggle-mobile" onclick="toggleLanguage()" aria-label="Switch to English">
+                        <span class="lang-flag">🇬🇧</span> EN
+                    </button>
                 </div>
-                <h1>La meilleure école de <span translate="no">wingfoil</span>, <span translate="no">kitesurf</span>, planche à voile et <span translate="no">surf</span> d'Essaouira</h1>
+                <h1 data-i18n="hero.title">La meilleure école de <span translate="no">wingfoil</span>, <span translate="no">kitesurf</span>, planche à voile et <span translate="no">surf</span> d'Essaouira</h1>
                 <div id="daily-recommendation" style="background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.3);padding:10px 20px;border-radius:50px;display:inline-block;margin-bottom:24px;font-size:0.95rem;color:white;">
-                    <i class="fas fa-sync fa-spin"></i> Vérification des conditions météo du jour...
+                    <i class="fas fa-sync fa-spin"></i> <span data-i18n="hero.loading">Vérification des conditions météo du jour...</span>
                 </div>
-                <p class="subtitle">Découvrez la magie de la capitale marocaine du vent avec des instructeurs certifiés, du matériel haut de gamme et des cours personnalisés pour tous les niveaux.</p>
+                <p class="subtitle" data-i18n="hero.subtitle">Découvrez la magie de la capitale marocaine du vent avec des instructeurs certifiés, du matériel haut de gamme et des cours personnalisés pour tous les niveaux.</p>
                 <div class="cta-group">
-                    <a href="pricing-essaouira.html" class="btn btn-primary">Afficher les prix</a>
+                    <a href="pricing-essaouira.html" class="btn btn-primary" data-i18n="hero.btn.prices">Afficher les prix</a>
                     <a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="btn btn-whatsapp" rel="noopener" target="_blank">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Réservez sur WhatsApp
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="hero.btn.whatsapp">Réservez sur WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -170,23 +232,23 @@
                 <div class="trust-grid">
                     <div class="trust-item">
                         <div class="trust-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
-                        <h3>Moniteurs Certifiés</h3>
-                        <p>Instructeurs expérimentés diplômés IKO &amp; VDWS pour votre sécurité.</p>
+                        <h3 data-i18n="trust.cert.title">Moniteurs Certifiés</h3>
+                        <p data-i18n="trust.cert.desc">Instructeurs expérimentés diplômés IKO &amp; VDWS pour votre sécurité.</p>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
-                        <h3>Équipement Récent</h3>
-                        <p>Ailes, planches et foils haut de gamme renouvelés chaque saison.</p>
+                        <h3 data-i18n="trust.equip.title">Équipement Récent</h3>
+                        <p data-i18n="trust.equip.desc">Ailes, planches et foils haut de gamme renouvelés chaque saison.</p>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon"><i class="fas fa-truck-pickup" aria-hidden="true"></i></div>
-                        <h3>Service Mobile &amp; Transport</h3>
-                        <p>Prise en charge à votre hôtel et transport vers le meilleur spot du jour.</p>
+                        <h3 data-i18n="trust.mobile.title">Service Mobile &amp; Transport</h3>
+                        <p data-i18n="trust.mobile.desc">Prise en charge à votre hôtel et transport vers le meilleur spot du jour.</p>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon"><i class="fas fa-star" aria-hidden="true"></i></div>
-                        <h3>4.9/5 sur Google</h3>
-                        <p>Plus de 127 avis clients satisfaits du monde entier.</p>
+                        <h3 data-i18n="trust.rating.title">4.9/5 sur Google</h3>
+                        <p data-i18n="trust.rating.desc">Plus de 127 avis clients satisfaits du monde entier.</p>
                     </div>
                 </div>
             </div>
@@ -197,14 +259,14 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-text">
-                        <h2>Bienvenue chez <span class="text-primary">Kawki Kite</span> Essaouira</h2>
-                        <p>Située au cœur de la capitale marocaine du vent, <strong>Kawki Kite</strong> est l'école de référence à Essaouira pour l'apprentissage et le perfectionnement du <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> et <a href="surf-essaouira.html" translate="no">Surf</a>.</p>
-                        <p>Que vous soyez totalement débutant souhaitant tirer vos premiers bords ou un pratiquant confirmé cherchant du coaching sur les vagues de Sidi Kaouki ou Moulay Bouzerktoun, notre équipe passionnée vous garantit un apprentissage rapide et sécurisé.</p>
+                        <h2 data-i18n="about.title">Bienvenue chez <span class="text-primary">Kawki Kite</span> Essaouira</h2>
+                        <p data-i18n="about.p1">Située au cœur de la capitale marocaine du vent, <strong>Kawki Kite</strong> est l'école de référence à Essaouira pour l'apprentissage et le perfectionnement du <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> et <a href="surf-essaouira.html" translate="no">Surf</a>.</p>
+                        <p data-i18n="about.p2">Que vous soyez totalement débutant souhaitant tirer vos premiers bords ou un pratiquant confirmé cherchant du coaching sur les vagues de Sidi Kaouki ou Moulay Bouzerktoun, notre équipe passionnée vous garantit un apprentissage rapide et sécurisé.</p>
                         <div class="about-features">
-                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Cours Particuliers &amp; Collectifs</div>
-                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Matériel &amp; Combinaison Inclus</div>
-                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Français, Anglais, Arabe</div>
-                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Location de Matériel Récent</div>
+                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about.feat1">Cours Particuliers &amp; Collectifs</span></div>
+                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about.feat2">Matériel &amp; Combinaison Inclus</span></div>
+                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about.feat3">Français, Anglais, Arabe</span></div>
+                            <div class="feature-item"><i class="fas fa-check-circle" aria-hidden="true"></i> <span data-i18n="about.feat4">Location de Matériel Récent</span></div>
                         </div>
                     </div>
                     <div class="about-image">
@@ -218,27 +280,27 @@
         <section id="how-it-works" aria-label="Comment fonctionnent nos cours">
             <div class="container">
                 <div class="section-title">
-                    <h2>Comment Réserver &amp; Apprendre</h2>
-                    <p>Une école 100% mobile — nous vous accompagnons sur le meilleur spot chaque jour.</p>
+                    <h2 data-i18n="how.title">Comment Réserver &amp; Apprendre</h2>
+                    <p data-i18n="how.subtitle">Une école 100% mobile — nous vous accompagnons sur le meilleur spot chaque jour.</p>
                 </div>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">1</div>
                         <div class="step-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                        <h3>Réservation WhatsApp</h3>
-                        <p>Envoyez-nous un message sur <a href="https://wa.me/212625044412" rel="noopener" target="_blank">WhatsApp</a> pour réserver. Nous définissons votre niveau et vos horaires.</p>
+                        <h3 data-i18n="how.step1.title">Réservation WhatsApp</h3>
+                        <p data-i18n="how.step1.desc">Envoyez-nous un message sur <a href="https://wa.me/212625044412" rel="noopener" target="_blank">WhatsApp</a> pour réserver. Nous définissons votre niveau et vos horaires.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">2</div>
                         <div class="step-icon"><i class="fas fa-car" aria-hidden="true"></i></div>
-                        <h3>Prise en charge</h3>
-                        <p>Nous pouvons vous récupérer à votre hôtel ou vous retrouver directement sur le <a href="spots-kitesurf-essaouira.html">spot de plage</a> (Baie d'Essaouira, Sidi Kaouki, Moulay).</p>
+                        <h3 data-i18n="how.step2.title">Prise en charge</h3>
+                        <p data-i18n="how.step2.desc">Nous pouvons vous récupérer à votre hôtel ou vous retrouver directement sur le <a href="spots-kitesurf-essaouira.html">spot de plage</a> (Baie d'Essaouira, Sidi Kaouki, Moulay).</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">3</div>
                         <div class="step-icon"><i class="fas fa-water" aria-hidden="true"></i></div>
-                        <h3>Glissez &amp; Progressez</h3>
-                        <p>Profitez de votre cours avec du matériel haut de gamme inclus. Progression garantie et plaisir au rendez-vous !</p>
+                        <h3 data-i18n="how.step3.title">Glissez &amp; Progressez</h3>
+                        <p data-i18n="how.step3.desc">Profitez de votre cours avec du matériel haut de gamme inclus. Progression garantie et plaisir au rendez-vous !</p>
                     </div>
                 </div>
             </div>
@@ -248,8 +310,8 @@
         <section id="courses" aria-label="Nos cours de sports nautiques">
             <div class="container">
                 <div class="section-title">
-                    <h2>Nos Sports Nautiques</h2>
-                    <p>Choisissez votre discipline — de la sensation du wingfoil au surf classique.</p>
+                    <h2 data-i18n="sports.title">Nos Sports Nautiques</h2>
+                    <p data-i18n="sports.subtitle">Choisissez votre discipline — de la sensation du wingfoil au surf classique.</p>
                 </div>
                 <div class="sports-grid">
                     <a href="wingfoil-essaouira.html" class="sport-card" id="sport-wingfoil">
@@ -257,10 +319,10 @@
                             <img src="IMG_7547.JPG" alt="Cours de Wingfoil dans la baie d'Essaouira" width="600" height="400" loading="lazy">
                         </div>
                         <div class="sport-card-content">
-                            <div class="sport-tag">Les Plus Populaires</div>
+                            <div class="sport-tag" data-i18n="sports.wingfoil.tag">Les Plus Populaires</div>
                             <h3 translate="no">Wingfoil</h3>
-                            <p>Le sport nautique le plus en vogue de la décennie. Volez au-dessus de l'eau grâce à une simple aile manuelle.</p>
-                            <span class="sport-link">Découvrez le Wingfoil <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <p data-i18n="sports.wingfoil.desc">Le sport nautique le plus en vogue de la décennie. Volez au-dessus de l'eau grâce à une simple aile manuelle.</p>
+                            <span class="sport-link"><span data-i18n="sports.wingfoil.link">Découvrez le Wingfoil</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </a>
                     <a href="kitesurf-essaouira.html" class="sport-card" id="sport-kitesurf">
@@ -269,8 +331,8 @@
                         </div>
                         <div class="sport-card-content">
                             <h3 translate="no">Kitesurf</h3>
-                            <p>Domptez le vent légendaire d'Essaouira avec une aile de kite et surfez sur les houles de l'Atlantique.</p>
-                            <span class="sport-link">Découvrez le Kitesurf <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <p data-i18n="sports.kitesurf.desc">Domptez le vent légendaire d'Essaouira avec une aile de kite et surfez sur les houles de l'Atlantique.</p>
+                            <span class="sport-link"><span data-i18n="sports.kitesurf.link">Découvrez le Kitesurf</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </a>
                     <a href="windsurf-essaouira.html" class="sport-card" id="sport-windsurf">
@@ -279,8 +341,8 @@
                         </div>
                         <div class="sport-card-content">
                             <h3 translate="no">Windsurf</h3>
-                            <p>Le classique indémodable. Ressentez la connexion directe entre vous, la voile et l'océan.</p>
-                            <span class="sport-link">Découvrez le Windsurf <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <p data-i18n="sports.windsurf.desc">Le classique indémodable. Ressentez la connexion directe entre vous, la voile et l'océan.</p>
+                            <span class="sport-link"><span data-i18n="sports.windsurf.link">Découvrez le Windsurf</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </a>
                     <a href="surf-essaouira.html" class="sport-card" id="sport-surf">
@@ -289,8 +351,8 @@
                         </div>
                         <div class="sport-card-content">
                             <h3 translate="no">Surf</h3>
-                            <p>Prenez votre première vague ou perfectionnez votre technique sur les magnifiques beach breaks d'Essaouira.</p>
-                            <span class="sport-link">Découvrez le Surf <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <p data-i18n="sports.surf.desc">Prenez votre première vague ou perfectionnez votre technique sur les magnifiques beach breaks d'Essaouira.</p>
+                            <span class="sport-link"><span data-i18n="sports.surf.link">Découvrez le Surf</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </a>
                 </div>
@@ -301,14 +363,14 @@
         <section id="weather" aria-label="Météo et vent en direct à Essaouira">
             <div class="container">
                 <div class="section-title">
-                    <h2>Météo &amp; Vent en Direct — Essaouira</h2>
-                    <p>Données temps réel depuis <a href="weather-essaouira.html">notre station météo</a>. Mise à jour toutes les 15 minutes.</p>
+                    <h2 data-i18n="weather.title">Météo &amp; Vent en Direct — Essaouira</h2>
+                    <p data-i18n="weather.subtitle">Données temps réel depuis <a href="weather-essaouira.html">notre station météo</a>. Mise à jour toutes les 15 minutes.</p>
                 </div>
                 <div class="weather-widget" id="weather-widget">
                     <div class="weather-current">
                         <div class="weather-main">
                             <div class="weather-temp" id="weather-temp">--°C</div>
-                            <div class="weather-desc" id="weather-desc">Chargement...</div>
+                            <div class="weather-desc" id="weather-desc" data-i18n="weather.loading">Chargement...</div>
                             <div class="weather-time" id="weather-time"></div>
                         </div>
                         <div class="weather-wind-display">
@@ -318,19 +380,19 @@
                             </div>
                             <div class="wind-stats">
                                 <div class="wind-stat">
-                                    <span class="wind-stat-label">Vitesse Vent</span>
+                                    <span class="wind-stat-label" data-i18n="weather.windspeed">Vitesse Vent</span>
                                     <span class="wind-stat-value" id="weather-wind">-- km/h</span>
                                 </div>
                                 <div class="wind-stat">
-                                    <span class="wind-stat-label">Rafales</span>
+                                    <span class="wind-stat-label" data-i18n="weather.gusts">Rafales</span>
                                     <span class="wind-stat-value" id="weather-gusts">-- km/h</span>
                                 </div>
                                 <div class="wind-stat">
-                                    <span class="wind-stat-label">Direction</span>
+                                    <span class="wind-stat-label" data-i18n="weather.direction">Direction</span>
                                     <span class="wind-stat-value" id="weather-direction">--</span>
                                 </div>
                                 <div class="wind-stat">
-                                    <span class="wind-stat-label">Nuages</span>
+                                    <span class="wind-stat-label" data-i18n="weather.clouds">Nuages</span>
                                     <span class="wind-stat-value" id="weather-cloud">--%</span>
                                 </div>
                             </div>
@@ -340,24 +402,24 @@
                     <div class="weather-levels">
                         <div class="level-badge level-beginner">
                             <i class="fas fa-child" aria-hidden="true"></i>
-                            <span>Débutant</span>
+                            <span data-i18n="weather.beginner">Débutant</span>
                             <span class="level-status" id="level-beginner-status">--</span>
                         </div>
                         <div class="level-badge level-intermediate">
                             <i class="fas fa-running" aria-hidden="true"></i>
-                            <span>Intermédiaire</span>
+                            <span data-i18n="weather.intermediate">Intermédiaire</span>
                             <span class="level-status" id="level-intermediate-status">--</span>
                         </div>
                         <div class="level-badge level-expert">
                             <i class="fas fa-bolt" aria-hidden="true"></i>
-                            <span>Expert</span>
+                            <span data-i18n="weather.expert">Expert</span>
                             <span class="level-status" id="level-expert-status">--</span>
                         </div>
                     </div>
 
                     <div class="weather-forecast" id="weather-forecast"></div>
                     <div class="weather-cta">
-                        <a href="weather-essaouira.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.4);">Voir les prévisions complètes →</a>
+                        <a href="weather-essaouira.html" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,0.4);" data-i18n="weather.cta">Voir les prévisions complètes →</a>
                     </div>
                 </div>
             </div>
@@ -367,31 +429,31 @@
         <section id="prices" aria-label="Aperçu des tarifs">
             <div class="container">
                 <div class="section-title">
-                    <h2>Tarifs Simples &amp; Transparents</h2>
-                    <p>Tout l'équipement et la combinaison isotherme sont toujours inclus dans nos tarifs.</p>
+                    <h2 data-i18n="pricing.title">Tarifs Simples &amp; Transparents</h2>
+                    <p data-i18n="pricing.subtitle">Tout l'équipement et la combinaison isotherme sont toujours inclus dans nos tarifs.</p>
                 </div>
                 <div class="pricing-overview-grid">
                     <div class="pricing-overview-card">
                         <div class="pricing-overview-icon"><i class="fas fa-water" aria-hidden="true"></i></div>
-                        <h3 translate="no">Cours de Surf</h3>
-                        <div class="pricing-overview-price">À partir de <strong>25€</strong> / heure</div>
-                        <p>Idéal pour débuter sur les vagues de la baie d'Essaouira. Matériel et combinaison inclus.</p>
-                        <a href="pricing-essaouira.html#surf-pricing" class="btn btn-outline">Voir tous les tarifs surf</a>
+                        <h3 data-i18n="pricing.surf.title">Cours de Surf</h3>
+                        <div class="pricing-overview-price" data-i18n="pricing.surf.price">À partir de <strong>25€</strong> / heure</div>
+                        <p data-i18n="pricing.surf.desc">Idéal pour débuter sur les vagues de la baie d'Essaouira. Matériel et combinaison inclus.</p>
+                        <a href="pricing-essaouira.html#surf-pricing" class="btn btn-outline" data-i18n="pricing.surf.btn">Voir tous les tarifs surf</a>
                     </div>
                     <div class="pricing-overview-card featured">
-                        <div class="pricing-overview-badge">Le plus populaire</div>
+                        <div class="pricing-overview-badge" data-i18n="pricing.wind.badge">Le plus populaire</div>
                         <div class="pricing-overview-icon"><i class="fas fa-wind" aria-hidden="true"></i></div>
                         <h3>Wingfoil &amp; Kitesurf</h3>
-                        <div class="pricing-overview-price">À partir de <strong>50€</strong> / heure</div>
-                        <p>Cours collectifs ou particuliers de Wingfoil, Kitesurf et Windsurf avec moniteur diplômé.</p>
-                        <a href="pricing-essaouira.html#wind-pricing" class="btn btn-primary">Voir tous les tarifs vent</a>
+                        <div class="pricing-overview-price" data-i18n="pricing.wind.price">À partir de <strong>50€</strong> / heure</div>
+                        <p data-i18n="pricing.wind.desc">Cours collectifs ou particuliers de Wingfoil, Kitesurf et Windsurf avec moniteur diplômé.</p>
+                        <a href="pricing-essaouira.html#wind-pricing" class="btn btn-primary" data-i18n="pricing.wind.btn">Voir tous les tarifs vent</a>
                     </div>
                     <div class="pricing-overview-card">
                         <div class="pricing-overview-icon"><i class="fas fa-toolbox" aria-hidden="true"></i></div>
-                        <h3>Location de Matériel</h3>
-                        <div class="pricing-overview-price">À partir de <strong>35€</strong> / demi-journée</div>
-                        <p>Louez du matériel récent et contrôlé pour naviguer en toute autonomie.</p>
-                        <a href="pricing-essaouira.html#rental-pricing" class="btn btn-outline">Voir la location</a>
+                        <h3 data-i18n="pricing.rental.title">Location de Matériel</h3>
+                        <div class="pricing-overview-price" data-i18n="pricing.rental.price">À partir de <strong>35€</strong> / demi-journée</div>
+                        <p data-i18n="pricing.rental.desc">Louez du matériel récent et contrôlé pour naviguer en toute autonomie.</p>
+                        <a href="pricing-essaouira.html#rental-pricing" class="btn btn-outline" data-i18n="pricing.rental.btn">Voir la location</a>
                     </div>
                 </div>
             </div>
@@ -401,8 +463,8 @@
         <section id="reviews" aria-label="Avis des clients">
             <div class="container">
                 <div class="section-title">
-                    <h2>Ce que disent nos élèves</h2>
-                    <p>Avis certifiés de passionnés ayant appris le wingfoil et le kitesurf avec nous.</p>
+                    <h2 data-i18n="reviews.title">Ce que disent nos élèves</h2>
+                    <p data-i18n="reviews.subtitle">Avis certifiés de passionnés ayant appris le wingfoil et le kitesurf avec nous.</p>
                 </div>
                 <div class="reviews-wrapper">
                     <div class="review-summary">
@@ -414,25 +476,25 @@
                             <i class="fas fa-star" aria-hidden="true"></i>
                             <i class="fas fa-star" aria-hidden="true"></i>
                         </div>
-                        <div class="review-count">Basé sur 127+ avis Google</div>
+                        <div class="review-count" data-i18n="reviews.count">Basé sur 127+ avis Google</div>
                     </div>
                     <div class="review-carousel-container">
                         <button class="carousel-btn prev" onclick="scrollReviews(-1)" aria-label="Avis précédent"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
                         <div class="review-carousel" id="review-carousel">
                             <div class="review-card">
                                 <div class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="review-card-text">"Expérience incroyable en wingfoil ! Les moniteurs sont très patients et pédagogues. Essaouira est le spot parfait pour apprendre."</p>
-                                <div class="review-card-author"><strong>Sophie L.</strong><span>France — Cours Wingfoil</span></div>
+                                <p class="review-card-text" data-i18n="reviews.r1.text">"Expérience incroyable en wingfoil ! Les moniteurs sont très patients et pédagogues. Essaouira est le spot parfait pour apprendre."</p>
+                                <div class="review-card-author"><strong>Sophie L.</strong><span data-i18n="reviews.r1.author">France — Cours Wingfoil</span></div>
                             </div>
                             <div class="review-card">
                                 <div class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="review-card-text">"Meilleure école de kitesurf à Essaouira ! Matériel au top, prise en charge directement à l'hôtel, progression très rapide."</p>
-                                <div class="review-card-author"><strong>Marc D.</strong><span>Belgique — Stage Kitesurf</span></div>
+                                <p class="review-card-text" data-i18n="reviews.r2.text">"Meilleure école de kitesurf à Essaouira ! Matériel au top, prise en charge directement à l'hôtel, progression très rapide."</p>
+                                <div class="review-card-author"><strong>Marc D.</strong><span data-i18n="reviews.r2.author">Belgique — Stage Kitesurf</span></div>
                             </div>
                             <div class="review-card">
                                 <div class="review-card-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="review-card-text">"Super session de surf en famille. Des vagues parfaites et des conseils très clairs du moniteur. On reviendra l'année prochaine !"</p>
-                                <div class="review-card-author"><strong>Elena &amp; Thomas</strong><span>Allemagne — Cours Surf</span></div>
+                                <p class="review-card-text" data-i18n="reviews.r3.text">"Super session de surf en famille. Des vagues parfaites et des conseils très clairs du moniteur. On reviendra l'année prochaine !"</p>
+                                <div class="review-card-author"><strong>Elena &amp; Thomas</strong><span data-i18n="reviews.r3.author">Allemagne — Cours Surf</span></div>
                             </div>
                         </div>
                         <button class="carousel-btn next" onclick="scrollReviews(1)" aria-label="Avis suivant"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
@@ -445,35 +507,35 @@
         <section id="faq-preview" aria-label="Questions fréquentes">
             <div class="container">
                 <div class="section-title">
-                    <h2>Questions Fréquentes</h2>
-                    <p>Tout ce que vous devez savoir avant de réserver vos cours à Essaouira.</p>
+                    <h2 data-i18n="faq.title">Questions Fréquentes</h2>
+                    <p data-i18n="faq.subtitle">Tout ce que vous devez savoir avant de réserver vos cours à Essaouira.</p>
                 </div>
                 <div class="faq-list" role="list">
                     <details class="faq-item" role="listitem">
                         <summary class="faq-question">
-                            <span>Où apprendre le wingfoil à Essaouira ?</span>
+                            <span data-i18n="faq.q1">Où apprendre le wingfoil à Essaouira ?</span>
                             <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
                         </summary>
                         <div class="faq-answer">
-                            <p>Kawki Kite enseigne le <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directement dans la baie d'Essaouira, le meilleur spot avec de l'eau plate, un fond sableux et un vent régulier. Nous proposons des cours pour tous les niveaux.</p>
+                            <p data-i18n="faq.a1">Kawki Kite enseigne le <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directement dans la baie d'Essaouira, le meilleur spot avec de l'eau plate, un fond sableux et un vent régulier. Nous proposons des cours pour tous les niveaux.</p>
                         </div>
                     </details>
                     <details class="faq-item" role="listitem">
                         <summary class="faq-question">
-                            <span>Quelle est la meilleure saison pour le kitesurf au Maroc ?</span>
+                            <span data-i18n="faq.q2">Quelle est la meilleure saison pour le kitesurf au Maroc ?</span>
                             <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
                         </summary>
                         <div class="faq-answer">
-                            <p>La période d'avril à septembre offre les alizés les plus forts et les plus réguliers (18 à 30 nœuds quotidiens). Cependant, Essaouira bénéficie de vent navigable pratiquement toute l'année. Consultez nos <a href="weather-essaouira.html">prévisions météo en direct</a>.</p>
+                            <p data-i18n="faq.a2">La période d'avril à septembre offre les alizés les plus forts et les plus réguliers (18 à 30 nœuds quotidiens). Cependant, Essaouira bénéficie de vent navigable pratiquement toute l'année. Consultez nos <a href="weather-essaouira.html">prévisions météo en direct</a>.</p>
                         </div>
                     </details>
                     <details class="faq-item" role="listitem">
-                        <summary class="faq-question"><span>Faut-il avoir de l'expérience pour débuter ?</span><i class="fas fa-plus faq-icon" aria-hidden="true"></i></summary>
-                        <div class="faq-answer"><p>Aucune expérience préalable n'est nécessaire ! Tous nos cours sont conçus pour les débutants complets. Nos moniteurs certifiés vous accompagnent étape par étape en toute sécurité.</p></div>
+                        <summary class="faq-question"><span data-i18n="faq.q3">Faut-il avoir de l'expérience pour débuter ?</span><i class="fas fa-plus faq-icon" aria-hidden="true"></i></summary>
+                        <div class="faq-answer"><p data-i18n="faq.a3">Aucune expérience préalable n'est nécessaire ! Tous nos cours sont conçus pour les débutants complets. Nos moniteurs certifiés vous accompagnent étape par étape en toute sécurité.</p></div>
                     </details>
                 </div>
                 <div style="text-align:center;margin-top:32px;">
-                    <a href="faq-kitesurf-essaouira.html" class="btn btn-outline">Consulter toutes les questions (FAQ) →</a>
+                    <a href="faq-kitesurf-essaouira.html" class="btn btn-outline" data-i18n="faq.cta">Consulter toutes les questions (FAQ) →</a>
                 </div>
             </div>
         </section>
@@ -483,28 +545,28 @@
             <div class="container">
                 <div class="contact-container">
                     <div class="contact-info">
-                        <h2>Réservez votre aventure</h2>
-                        <p>Une question ou une réservation ? Contactez-nous directement sur WhatsApp pour une réponse rapide en quelques minutes.</p>
+                        <h2 data-i18n="contact.title">Réservez votre aventure</h2>
+                        <p data-i18n="contact.desc">Une question ou une réservation ? Contactez-nous directement sur WhatsApp pour une réponse rapide en quelques minutes.</p>
                         <div class="contact-links">
                             <a href="https://wa.me/212625044412" class="contact-link" rel="noopener" target="_blank">
                                 <i class="fab fa-whatsapp" aria-hidden="true"></i>
                                 <div>
-                                    <strong>WhatsApp &amp; Téléphone</strong>
+                                    <strong data-i18n="contact.whatsapp.label">WhatsApp &amp; Téléphone</strong>
                                     <span>+212 625 044 412</span>
                                 </div>
                             </a>
                             <a href="mailto:se552733@gmail.com" class="contact-link">
                                 <i class="far fa-envelope" aria-hidden="true"></i>
                                 <div>
-                                    <strong>Email Direct</strong>
+                                    <strong data-i18n="contact.email.label">Email Direct</strong>
                                     <span>se552733@gmail.com</span>
                                 </div>
                             </a>
                             <div class="contact-link">
                                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <div>
-                                    <strong>Localisation</strong>
-                                    <span>Baie d'Essaouira &amp; Sidi Kaouki, Maroc</span>
+                                    <strong data-i18n="contact.location.label">Localisation</strong>
+                                    <span data-i18n="contact.location.value">Baie d'Essaouira &amp; Sidi Kaouki, Maroc</span>
                                 </div>
                             </div>
                         </div>
@@ -512,9 +574,9 @@
                     <div style="display:flex;align-items:center;justify-content:center;background:white;padding:40px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
                         <div style="text-align:center;">
                             <i class="fab fa-whatsapp" style="font-size:4rem;color:#25d366;margin-bottom:16px;"></i>
-                            <h3>Réservation Instantanée sur WhatsApp</h3>
-                            <p style="color:var(--text-muted);margin-bottom:24px;">Discutez avec nos moniteurs, choisissez vos dates et votre sport.</p>
-                            <a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="btn btn-whatsapp" rel="noopener" target="_blank">
+                            <h3 data-i18n="contact.instant.title">Réservation Instantanée sur WhatsApp</h3>
+                            <p style="color:var(--text-muted);margin-bottom:24px;" data-i18n="contact.instant.desc">Discutez avec nos moniteurs, choisissez vos dates et votre sport.</p>
+                            <a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="btn btn-whatsapp" rel="noopener" target="_blank" data-i18n="contact.instant.btn">
                                 Discuter sur WhatsApp
                             </a>
                         </div>
@@ -530,10 +592,10 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="kks.jpg" alt="Logo Kawki Kite" width="50" height="50" loading="lazy">
-                    <p>Kawki Kite — Première école de sports nautiques à Essaouira, Maroc. Wingfoil, Kitesurf, Windsurf &amp; Surf.</p>
+                    <p data-i18n="footer.brand">Kawki Kite — Première école de sports nautiques à Essaouira, Maroc. Wingfoil, Kitesurf, Windsurf &amp; Surf.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Nos Sports</h4>
+                    <h4 data-i18n="footer.sports">Nos Sports</h4>
                     <ul>
                         <li><a href="wingfoil-essaouira.html" translate="no">Wingfoil</a></li>
                         <li><a href="kitesurf-essaouira.html" translate="no">Kitesurf</a></li>
@@ -542,22 +604,22 @@
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Informations</h4>
+                    <h4 data-i18n="footer.info">Informations</h4>
                     <ul>
-                        <li><a href="pricing-essaouira.html">Tarifs</a></li>
-                        <li><a href="spots-kitesurf-essaouira.html">Spots</a></li>
-                        <li><a href="weather-essaouira.html">Météo</a></li>
-                        <li><a href="faq-kitesurf-essaouira.html">FAQ</a></li>
+                        <li><a href="pricing-essaouira.html" data-i18n="nav.pricing">Tarifs</a></li>
+                        <li><a href="spots-kitesurf-essaouira.html" data-i18n="nav.spots">Spots</a></li>
+                        <li><a href="weather-essaouira.html" data-i18n="nav.weather">Météo</a></li>
+                        <li><a href="faq-kitesurf-essaouira.html" data-i18n="nav.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.contact">Contact</h4>
                     <a href="https://wa.me/212625044412" rel="noopener" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i> +212 625 044 412</a>
                     <a href="mailto:se552733@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i> se552733@gmail.com</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025–2026 Kawki Kite — Essaouira, Maroc. Tous droits réservés.</p>
+                <p data-i18n="footer.copy">&copy; 2025–2026 Kawki Kite — Essaouira, Maroc. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -567,6 +629,8 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
+    <!-- Translation Engine (must load BEFORE script.js) -->
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
