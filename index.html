@@ -17,6 +17,7 @@
     <!-- hreflang -->
     <link rel="alternate" hreflang="fr" href="https://kitesurfwingessaouira.com/">
     <link rel="alternate" hreflang="en" href="https://kitesurfwingessaouira.com/en/index.html">
+    <link rel="alternate" hreflang="es" href="https://kitesurfwingessaouira.com/es/index.html">
     <link rel="alternate" hreflang="x-default" href="https://kitesurfwingessaouira.com/">
 
     <!-- Open Graph -->
@@ -51,54 +52,57 @@
 
     <!-- Language Toggle Styles -->
     <style>
-        /* Language toggle button */
-        .lang-toggle {
+        .lang-selector {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            padding: 6px 14px;
-            border-radius: 50px;
+            gap: 4px;
             background: rgba(255,255,255,0.15);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255,255,255,0.25);
+            padding: 3px 6px;
+            border-radius: 50px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
             color: white;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
         }
-        .lang-toggle:hover {
-            background: rgba(255,255,255,0.25);
-            transform: scale(1.05);
+        .lang-btn:hover, .lang-btn.active {
+            background: rgba(255,255,255,0.3);
+            color: white;
         }
-        .lang-flag {
-            font-size: 1.1rem;
-            line-height: 1;
+        header.scrolled .lang-selector {
+            background: rgba(0,119,182,0.1);
+            border-color: rgba(0,119,182,0.25);
         }
-        /* In scrolled header (dark bg) */
-        header.scrolled .lang-toggle {
-            background: rgba(0,119,182,0.15);
-            border-color: rgba(0,119,182,0.3);
+        header.scrolled .lang-btn {
             color: var(--primary, #0077b6);
         }
-        header.scrolled .lang-toggle:hover {
-            background: rgba(0,119,182,0.25);
+        header.scrolled .lang-btn:hover, header.scrolled .lang-btn.active {
+            background: var(--primary, #0077b6);
+            color: white;
         }
-        /* Mobile */
-        @media (max-width: 768px) {
-            .lang-toggle-desktop { display: none !important; }
-            .lang-toggle-mobile {
-                display: inline-flex !important;
-                margin: 10px auto;
-                background: rgba(0,119,182,0.1);
-                color: var(--primary, #0077b6);
-                border-color: rgba(0,119,182,0.3);
-            }
+        .social-nav-link {
+            color: white;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            transition: transform 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
         }
-        @media (min-width: 769px) {
-            .lang-toggle-mobile { display: none !important; }
+        .social-nav-link:hover {
+            color: #e1306c;
+            transform: scale(1.15);
+        }
+        header.scrolled .social-nav-link {
+            color: #e1306c;
         }
     </style>
 
@@ -182,9 +186,16 @@
                     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                     <li><a href="https://wa.me/212625044412?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20cours" class="nav-cta" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="nav.book">Réserver</span></a></li>
                     <li>
-                        <button class="lang-toggle lang-toggle-desktop" id="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">
-                            <span class="lang-flag">🇬🇧</span> EN
-                        </button>
+                        <div class="lang-selector">
+                            <button onclick="setLanguage('fr')" class="lang-btn active" data-lang="fr">FR</button>
+                            <button onclick="setLanguage('en')" class="lang-btn" data-lang="en">EN</button>
+                            <button onclick="setLanguage('es')" class="lang-btn" data-lang="es">ES</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/kaouki_kite/" target="_blank" rel="noopener noreferrer" class="social-nav-link" aria-label="Instagram @kaouki_kite">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -555,6 +566,13 @@
                                     <span>+212 625 044 412</span>
                                 </div>
                             </a>
+                            <a href="https://www.instagram.com/kaouki_kite/" class="contact-link" rel="noopener" target="_blank">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <span>@kaouki_kite</span>
+                                </div>
+                            </a>
                             <a href="mailto:se552733@gmail.com" class="contact-link">
                                 <i class="far fa-envelope" aria-hidden="true"></i>
                                 <div>
@@ -615,6 +633,7 @@
                 <div class="footer-contact">
                     <h4 data-i18n="footer.contact">Contact</h4>
                     <a href="https://wa.me/212625044412" rel="noopener" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i> +212 625 044 412</a>
+                    <a href="https://www.instagram.com/kaouki_kite/" rel="noopener" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i> @kaouki_kite</a>
                     <a href="mailto:se552733@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i> se552733@gmail.com</a>
                 </div>
             </div>
