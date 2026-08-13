@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kawki-kite-v1';
+const CACHE_NAME = 'Kaouki-kite-v1';
 const STATIC_ASSETS = [
     'index.html',
     'style.css',

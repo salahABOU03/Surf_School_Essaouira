@@ -1,4 +1,4 @@
-# Kawki Kite — Watersports School Essaouira
+# Kaouki Kite — Watersports School Essaouira
 # https://kitesurfwingessaouira.com
 
 User-agent: *

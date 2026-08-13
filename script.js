@@ -1,5 +1,5 @@
 // ==========================================
-// Kawki Kite — Main JavaScript
+// Kaouki Kite — Main JavaScript
 // ==========================================
 
 (function () {

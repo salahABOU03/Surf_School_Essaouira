@@ -1,5 +1,5 @@
 /**
- * i18n.js — Kawki Kite Bilingual Translation System (FR / EN)
+ * i18n.js — Kaouki Kite Bilingual Translation System (FR / EN)
  * Auto-detects browser language, saves preference, toggles instantly.
  */
 
@@ -42,12 +42,12 @@ const translations = {
 
     // ===== ABOUT =====
     "about.title": {
-        fr: 'Bienvenue chez <span class="text-primary">Kawki Kite</span> Essaouira',
-        en: 'Welcome to <span class="text-primary">Kawki Kite</span> Essaouira'
+        fr: 'Bienvenue chez <span class="text-primary">Kaouki Kite</span> Essaouira',
+        en: 'Welcome to <span class="text-primary">Kaouki Kite</span> Essaouira'
     },
     "about.p1": {
-        fr: 'Située au cœur de la capitale marocaine du vent, <strong>Kawki Kite</strong> est l\'école de référence à Essaouira pour l\'apprentissage et le perfectionnement du <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> et <a href="surf-essaouira.html" translate="no">Surf</a>.',
-        en: 'Located in the heart of Morocco\'s wind capital, <strong>Kawki Kite</strong> is Essaouira\'s leading school for learning and improving your <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> and <a href="surf-essaouira.html" translate="no">Surf</a> skills.'
+        fr: 'Située au cœur de la capitale marocaine du vent, <strong>Kaouki Kite</strong> est l\'école de référence à Essaouira pour l\'apprentissage et le perfectionnement du <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> et <a href="surf-essaouira.html" translate="no">Surf</a>.',
+        en: 'Located in the heart of Morocco\'s wind capital, <strong>Kaouki Kite</strong> is Essaouira\'s leading school for learning and improving your <a href="wingfoil-essaouira.html" translate="no">Wingfoil</a>, <a href="kitesurf-essaouira.html" translate="no">Kitesurf</a>, <a href="windsurf-essaouira.html">Windsurf</a> and <a href="surf-essaouira.html" translate="no">Surf</a> skills.'
     },
     "about.p2": {
         fr: "Que vous soyez totalement débutant souhaitant tirer vos premiers bords ou un pratiquant confirmé cherchant du coaching sur les vagues de Sidi Kaouki ou Moulay Bouzerktoun, notre équipe passionnée vous garantit un apprentissage rapide et sécurisé.",
@@ -135,8 +135,8 @@ const translations = {
     "faq.subtitle": { fr: "Tout ce que vous devez savoir avant de réserver vos cours à Essaouira.", en: "Everything you need to know before booking your lessons in Essaouira." },
     "faq.q1": { fr: "Où apprendre le wingfoil à Essaouira ?", en: "Where to learn wingfoil in Essaouira?" },
     "faq.a1": {
-        fr: 'Kawki Kite enseigne le <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directement dans la baie d\'Essaouira, le meilleur spot avec de l\'eau plate, un fond sableux et un vent régulier. Nous proposons des cours pour tous les niveaux.',
-        en: 'Kawki Kite teaches <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directly in Essaouira bay, the best spot with flat water, sandy bottom and consistent wind. We offer lessons for all levels.'
+        fr: 'Kaouki Kite enseigne le <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directement dans la baie d\'Essaouira, le meilleur spot avec de l\'eau plate, un fond sableux et un vent régulier. Nous proposons des cours pour tous les niveaux.',
+        en: 'Kaouki Kite teaches <a href="wingfoil-essaouira.html" translate="no">wingfoil</a> directly in Essaouira bay, the best spot with flat water, sandy bottom and consistent wind. We offer lessons for all levels.'
     },
     "faq.q2": { fr: "Quelle est la meilleure saison pour le kitesurf au Maroc ?", en: "What is the best season for kitesurfing in Morocco?" },
     "faq.a2": {
@@ -159,11 +159,11 @@ const translations = {
     "contact.instant.btn": { fr: "Discuter sur WhatsApp", en: "Chat on WhatsApp" },
 
     // ===== FOOTER =====
-    "footer.brand": { fr: "Kawki Kite — Première école de sports nautiques à Essaouira, Maroc. Wingfoil, Kitesurf, Windsurf & Surf.", en: "Kawki Kite — Leading watersports school in Essaouira, Morocco. Wingfoil, Kitesurf, Windsurf & Surf." },
+    "footer.brand": { fr: "Kaouki Kite — Première école de sports nautiques à Essaouira, Maroc. Wingfoil, Kitesurf, Windsurf & Surf.", en: "Kaouki Kite — Leading watersports school in Essaouira, Morocco. Wingfoil, Kitesurf, Windsurf & Surf." },
     "footer.sports": { fr: "Nos Sports", en: "Our Sports" },
     "footer.info": { fr: "Informations", en: "Information" },
     "footer.contact": { fr: "Contact", en: "Contact" },
-    "footer.copy": { fr: "© 2025–2026 Kawki Kite — Essaouira, Maroc. Tous droits réservés.", en: "© 2025–2026 Kawki Kite — Essaouira, Morocco. All rights reserved." },
+    "footer.copy": { fr: "© 2025–2026 Kaouki Kite — Essaouira, Maroc. Tous droits réservés.", en: "© 2025–2026 Kaouki Kite — Essaouira, Morocco. All rights reserved." },
 
     // ===== MOBILE NAV =====
     "mobile.sports.label": { fr: "Nos Sports", en: "Our Sports" }
@@ -180,7 +180,7 @@ function detectLanguage() {
     if (urlLang === 'en' || urlLang === 'fr') return urlLang;
 
     // 2. Check localStorage
-    const saved = localStorage.getItem('kawki-lang');
+    const saved = localStorage.getItem('Kaouki-lang');
     if (saved === 'en' || saved === 'fr') return saved;
 
     // 3. Auto-detect from browser
@@ -193,7 +193,7 @@ function detectLanguage() {
 
 function applyTranslations(lang) {
     currentLang = lang;
-    localStorage.setItem('kawki-lang', lang);
+    localStorage.setItem('Kaouki-lang', lang);
 
     // Update html lang attribute
     document.documentElement.lang = lang;
@@ -225,15 +225,15 @@ function applyTranslations(lang) {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
         metaDesc.setAttribute('content', lang === 'fr'
-            ? "Kawki Kite est la première école de sports nautiques à Essaouira, Maroc. Cours particuliers & collectifs de Wingfoil, Kitesurf, Windsurf & Surf. Location de matériel, coaching & camps. Réservez sur WhatsApp !"
-            : "Kawki Kite is the leading watersports school in Essaouira, Morocco. Private & group Wingfoil, Kitesurf, Windsurf & Surf lessons. Equipment rental, coaching & camps. Book on WhatsApp!"
+            ? "Kaouki Kite est la première école de sports nautiques à Essaouira, Maroc. Cours particuliers & collectifs de Wingfoil, Kitesurf, Windsurf & Surf. Location de matériel, coaching & camps. Réservez sur WhatsApp !"
+            : "Kaouki Kite is the leading watersports school in Essaouira, Morocco. Private & group Wingfoil, Kitesurf, Windsurf & Surf lessons. Equipment rental, coaching & camps. Book on WhatsApp!"
         );
     }
 
     // Update page title
     document.title = lang === 'fr'
-        ? "Kawki Kite — N°1 École de Wingfoil, Kitesurf, Windsurf & Surf à Essaouira, Maroc"
-        : "Kawki Kite — #1 Wingfoil, Kitesurf, Windsurf & Surf School in Essaouira, Morocco";
+        ? "Kaouki Kite — N°1 École de Wingfoil, Kitesurf, Windsurf & Surf à Essaouira, Maroc"
+        : "Kaouki Kite — #1 Wingfoil, Kitesurf, Windsurf & Surf School in Essaouira, Morocco";
 }
 
 function toggleLanguage() {
