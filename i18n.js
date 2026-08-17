@@ -16,9 +16,9 @@ const translations = {
     "nav.book": { fr: "Réserver", en: "Book Now", es: "Reservar", de: "Jetzt buchen" },
     "nav.skip": { fr: "Aller au contenu principal", en: "Skip to main content", es: "Ir al contenido principal", de: "Zum Hauptinhalt springen" },
 
-    // ===== WEBCAM LIVE =====
-    "webcam.badge": { fr: "DIRECT HD", en: "LIVE HD", es: "EN DIRECTO HD", de: "LIVE HD" },
-    "webcam.title": { fr: "Webcam Live HD — Baie d'Essaouira & Spot", en: "HD Live Webcam — Essaouira Bay & Spot", es: "Webcam HD en Directo — Bahía de Essaouira", de: "HD Live-Webcam — Bucht von Essaouira" },
+    // ===== WEBCAM / RADAR LIVE =====
+    "webcam.badge": { fr: "VENT EN DIRECT", en: "LIVE WIND", es: "VIENTO EN DIRECTO", de: "LIVE WIND" },
+    "webcam.title": { fr: "Radar de Vent & Conditions en Direct — Baie d'Essaouira", en: "Live Wind Radar & Spot Conditions — Essaouira Bay", es: "Radar de Viento y Condiciones en Directo — Bahía de Essaouira", de: "Live Wind-Radar & Spot-Bedingungen — Bucht von Essaouira" },
     "webcam.subtitle": { fr: "Consultez les conditions de vent, vagues et marée en direct avant votre session de wingfoil, kitesurf ou surf.", en: "Check real-time wind, wave and tide conditions live before your session.", es: "Consulta las condiciones de viento, olas y marea en directo antes de tu sesión.", de: "Prüfen Sie Wind-, Wellen- und Gezeitenbedingungen live vor Ihrer Session." },
     "webcam.player.title": { fr: "Spot Essaouira Beach — Stream HD 24/7", en: "Essaouira Beach Spot — HD Stream 24/7", es: "Spot Playa de Essaouira — Stream HD 24/7", de: "Spot Essaouira Beach — HD Stream 24/7" },
     "webcam.player.btn": { fr: "Réserver pour aujourd'hui", en: "Book for today", es: "Reservar para hoy", de: "Heute buchen" },
