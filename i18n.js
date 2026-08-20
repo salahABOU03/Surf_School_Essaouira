@@ -257,6 +257,10 @@ function toggleLanguage() {
     setLanguage(langs[nextIdx]);
 }
 
+// Expose globally on window
+window.setLanguage = setLanguage;
+window.toggleLanguage = toggleLanguage;
+
 function applyTranslations(lang) {
     currentLang = lang;
     localStorage.setItem('Kaouki-lang', lang);
