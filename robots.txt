@@ -10,6 +10,20 @@ Sitemap: https://kitesurfwingessaouira.com/sitemap.xml
 Disallow: /browserconfig.xml
 Disallow: /security.txt
 Disallow: /humans.txt
+Disallow: /generator.html
+Disallow: /create_docx.py
+Disallow: /contrats_export.csv
+Disallow: /offline.html
+Disallow: /sw.js
+
+# Block personal/parasitic files
+Disallow: /procuration.pdf
+Disallow: /procuration.docx
+Disallow: /procuration.html
+Disallow: /procuration(1).pdf
+Disallow: /Docker User service.pdf
+Disallow: /Rapport_Frontend_Flutter_PFA (1).pdf
+Disallow: /Travaux pratique 2  sara malih.pdf
 
 # Allow all search engines
 User-agent: Googlebot
