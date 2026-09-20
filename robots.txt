@@ -1,4 +1,4 @@
-# Kaouki Kite — Watersports School Essaouira
+# Kaouki Kite — École de Sports Nautiques Essaouira
 # https://kitesurfwingessaouira.com
 
 User-agent: *
@@ -20,10 +20,27 @@ Disallow: /sw.js
 Disallow: /procuration.pdf
 Disallow: /procuration.docx
 Disallow: /procuration.html
+Disallow: /procuration.tex
 Disallow: /procuration(1).pdf
 Disallow: /Docker User service.pdf
 Disallow: /Rapport_Frontend_Flutter_PFA (1).pdf
 Disallow: /Travaux pratique 2  sara malih.pdf
+
+# Block non-pertinent images and screenshots
+Disallow: /image.png
+Disallow: /image copy.png
+Disallow: /image copy 2.png
+Disallow: /image copy 3.png
+Disallow: /Capture d'écran 2026-06-11 212743.png
+Disallow: /Capture d'écran 2026-06-11 213304.png
+Disallow: /procuration_preview.png
+Disallow: /procuration_preview_p2.png
+Disallow: /procuration_preview_v2.png
+Disallow: /procuration_preview_v3.png
+Disallow: /procuration_final_preview.png
+
+# Block Arabic document
+Disallow: /طلب الاعفاء.pdf
 
 # Allow all search engines
 User-agent: Googlebot
